@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Search, Smartphone, TrendingUp, Users, Award, Globe } from 'lucide-react';
+import Particles from './Particles';
 
 import { motion } from 'framer-motion';
 
@@ -76,13 +77,25 @@ const Hero = () => {
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-200/40 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob" />
-          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-purple-200/40 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-2000" />
-          <div className="absolute -bottom-32 left-1/3 w-[500px] h-[500px] bg-pink-200/40 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-4000" />
+          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-green-200/40 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-2000" />
+          <div className="absolute -bottom-32 left-1/3 w-[500px] h-[500px] bg-teal-200/40 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-4000" />
           
           {/* Small Floating Shapes */}
-          <FloatingShape className="w-24 h-24 bg-yellow-300 top-20 left-[10%]" delay={0} />
+          <FloatingShape className="w-24 h-24 bg-blue-300 top-20 left-[10%]" delay={0} />
           <FloatingShape className="w-32 h-32 bg-green-300 bottom-20 right-[10%]" delay={1} />
-          <FloatingShape className="w-16 h-16 bg-red-300 top-1/2 left-[5%]" delay={2} />
+          <FloatingShape className="w-16 h-16 bg-cyan-300 top-1/2 left-[5%]" delay={2} />
+          
+          <Particles
+              className="absolute inset-0 z-0"
+              particleColors={['#2563eb', '#16a34a', '#0d9488']} // Blue, Green, Teal
+              particleCount={120}
+              particleSpread={10}
+              speed={0.1}
+              particleBaseSize={150}
+              moveParticlesOnHover={true}
+              alphaParticles={true}
+              disableRotation={false}
+          />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -95,14 +108,14 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full border border-blue-100 bg-blue-50/50 backdrop-blur-sm mb-6 text-sm font-medium text-blue-600">
-                <span className="flex h-2 w-2 rounded-full bg-blue-600 mr-2 animate-pulse"></span>
+            <div className="inline-flex items-center px-3 py-1 rounded-full border border-green-100 bg-green-50/50 backdrop-blur-sm mb-6 text-sm font-medium text-green-600">
+                <span className="flex h-2 w-2 rounded-full bg-green-600 mr-2 animate-pulse"></span>
                 WebBloom
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-[1.1] tracking-tight text-gray-900">
               Transform your <br className="hidden lg:block"/>
-              <TypingText text="digital presence" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 animate-gradient-x" />
+              <TypingText text="digital presence" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-teal-500 to-green-500 animate-gradient-x" />
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
@@ -112,16 +125,15 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-12">
               <Link
                 to="/contact"
-                className="group relative px-8 py-4 bg-gray-900 text-white rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all overflow-hidden"
+                className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-green-500 text-white rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all overflow-hidden hover:brightness-110"
               >
                   <span className="relative z-10 flex items-center">
                     Get Started <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
               <Link
                 to="/portfolio"
-                className="px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-bold text-lg hover:border-gray-900 hover:bg-gray-50 transition-all shadow-sm hover:shadow-md flex items-center justify-center lg:justify-start"
+                className="px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-bold text-lg hover:border-green-500 hover:text-green-600 hover:bg-green-50 transition-all shadow-sm hover:shadow-md flex items-center justify-center lg:justify-start"
               >
                 View Work
               </Link>
@@ -160,7 +172,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
             <div className="relative transform rotate-y-12 transition-transform duration-500 hover:rotate-y-0">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-purple-200 opacity-70 blur-3xl rounded-full"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-green-200 opacity-70 blur-3xl rounded-full"></div>
               
               <div className="relative bg-white/60 backdrop-blur-xl border border-white/40 rounded-[2rem] p-8 shadow-2xl">
                 <div className="flex items-center justify-between mb-8">
@@ -213,8 +225,8 @@ const Hero = () => {
                       whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.9)" }}
                       className="bg-white/50 p-4 rounded-xl flex items-center border border-white/60 shadow-sm transition-colors cursor-pointer"
                     >
-                         <div className="bg-purple-100 p-3 rounded-lg mr-4">
-                            <Smartphone className="h-6 w-6 text-purple-600" />
+                         <div className="bg-teal-100 p-3 rounded-lg mr-4">
+                            <Smartphone className="h-6 w-6 text-teal-600" />
                         </div>
                         <div>
                             <p className="text-sm text-gray-500">Mobile Responsive</p>
@@ -230,8 +242,8 @@ const Hero = () => {
                       whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.9)" }}
                       className="bg-white/50 p-4 rounded-xl flex items-center border border-white/60 shadow-sm transition-colors cursor-pointer"
                     >
-                        <div className="bg-orange-100 p-3 rounded-lg mr-4">
-                            <Search className="h-6 w-6 text-orange-600" />
+                        <div className="bg-green-100 p-3 rounded-lg mr-4">
+                            <Search className="h-6 w-6 text-green-600" />
                         </div>
                         <div>
                             <p className="text-sm text-gray-500">SEO Optimization</p>
@@ -243,7 +255,7 @@ const Hero = () => {
 
                {/* Floating elements */}
                <motion.div 
-                className="absolute -top-6 -right-6 bg-blue-600 text-white p-4 rounded-2xl shadow-xl"
+                className="absolute -top-6 -right-6 bg-gradient-to-r from-blue-600 to-green-600 text-white p-4 rounded-2xl shadow-xl"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                >

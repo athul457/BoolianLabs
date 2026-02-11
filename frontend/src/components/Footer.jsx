@@ -27,7 +27,7 @@ const Footer = () => {
               <a href="#" className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-blue-400 hover:border-blue-200 hover:bg-blue-50 transition-all duration-300 shadow-sm hover:shadow">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-pink-600 hover:border-pink-200 hover:bg-pink-50 transition-all duration-300 shadow-sm hover:shadow">
+              <a href="#" className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-green-600 hover:border-green-200 hover:bg-green-50 transition-all duration-300 shadow-sm hover:shadow">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-blue-700 hover:border-blue-200 hover:bg-blue-50 transition-all duration-300 shadow-sm hover:shadow">

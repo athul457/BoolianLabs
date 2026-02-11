@@ -114,6 +114,9 @@ const Particles = ({
     });
     const gl = renderer.gl;
     container.appendChild(gl.canvas);
+    gl.canvas.style.display = 'block';
+    gl.canvas.style.width = '100%';
+    gl.canvas.style.height = '100%';
     gl.clearColor(0, 0, 0, 0);
 
     const camera = new Camera(gl, { fov: 15 });

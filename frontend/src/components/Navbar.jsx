@@ -31,8 +31,8 @@ const Navbar = () => {
 
   const isActive = (path) => {
     return location.pathname === path 
-      ? 'text-blue-600 font-bold bg-blue-50' 
-      : 'text-gray-600 transition-all';
+      ? 'text-teal-600 font-bold bg-teal-50' 
+      : 'text-gray-600 transition-all hover:text-green-500';
   };
 
   return (
@@ -65,7 +65,7 @@ const Navbar = () => {
                 >
                     <span className="relative">
                         {link.name}
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-green-500 transition-all duration-300 group-hover:w-full"></span>
                     </span>
                 </Link>
                 ))}
@@ -76,7 +76,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             <Link
               to="/contact"
-              className="hidden md:flex items-center bg-gray-900 text-white hover:bg-black px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+               className="hidden md:flex items-center bg-gradient-to-r from-blue-600 to-green-500 text-white hover:brightness-110 px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               Get Started <ChevronRight className="ml-1 h-3 w-3" />
             </Link>
@@ -108,21 +108,21 @@ const Navbar = () => {
                 to={link.path}
                 className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${
                   location.pathname === link.path
-                    ? 'bg-blue-50 text-blue-600 border border-blue-100'
-                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    ? 'bg-teal-50 text-teal-600 border border-teal-100'
+                    : 'text-gray-600 hover:bg-green-50 hover:text-green-600'
                 }`}
                 onClick={() => setIsOpen(false)}
               >
                 <div className="flex items-center justify-between">
                     {link.name}
-                    {location.pathname === link.path && <div className="w-1.5 h-1.5 rounded-full bg-blue-600"></div>}
+                    {location.pathname === link.path && <div className="w-1.5 h-1.5 rounded-full bg-teal-600"></div>}
                 </div>
               </Link>
             ))}
             <div className="pt-6 mt-4 border-t border-gray-100">
               <Link
                 to="/contact"
-                className="flex items-center justify-center w-full bg-gray-900 hover:bg-black text-white px-4 py-4 rounded-xl font-bold shadow-lg transition-all"
+                className="flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-green-500 hover:brightness-110 text-white px-4 py-4 rounded-xl font-bold shadow-lg transition-all"
                 onClick={() => setIsOpen(false)}
               >
                 Get Started Now <ChevronRight className="ml-2 h-4 w-4" />

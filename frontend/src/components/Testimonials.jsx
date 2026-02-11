@@ -29,11 +29,11 @@ const Testimonials = () => {
       {/* Particles Background */}
       <div className="absolute inset-0 z-0">
         <Particles
-            particleColors={['#3b82f6', '#8b5cf6', '#e2e8f0']}
+            particleColors={['#2563eb', '#7c3aed', '#94a3b8']}
             particleCount={100}
             particleSpread={10}
             speed={0.1}
-            particleBaseSize={100}
+            particleBaseSize={200}
             moveParticlesOnHover={true}
             alphaParticles={true}
             disableRotation={false}
@@ -49,7 +49,7 @@ const Testimonials = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Clients Say</span>
+            What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">Clients Say</span>
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-600 max-w-2xl mx-auto"
@@ -73,7 +73,7 @@ const Testimonials = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
               <div className="absolute -top-6 -left-4">
-                 <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-3 rounded-2xl shadow-lg rotate-3 group-hover:rotate-6 transition-transform">
+                 <div className="bg-gradient-to-br from-blue-600 to-green-600 p-3 rounded-2xl shadow-lg rotate-3 group-hover:rotate-6 transition-transform">
                     <Quote className="h-6 w-6 text-white" />
                  </div>
               </div>

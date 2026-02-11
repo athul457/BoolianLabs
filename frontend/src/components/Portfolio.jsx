@@ -80,7 +80,7 @@ const Portfolio = () => {
       <div className="max-w-[95%] mx-auto bg-white rounded-[3rem] py-24 relative overflow-hidden shadow-sm">
       {/* Background Glow */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl pointer-events-none opacity-50"></div>
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-purple-100 rounded-full blur-3xl pointer-events-none opacity-50"></div>
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-green-100 rounded-full blur-3xl pointer-events-none opacity-50"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between items-end mb-12">

@@ -36,11 +36,11 @@ const WhyChooseUs = () => {
         {/* Particles Background */}
       <div className="absolute inset-0 z-0">
         <Particles
-            particleColors={['#3b82f6', '#8b5cf6', '#e2e8f0']}
+            particleColors={['#2563eb', '#7c3aed', '#94a3b8']}
             particleCount={100}
             particleSpread={10}
             speed={0.1}
-            particleBaseSize={100}
+            particleBaseSize={200}
             moveParticlesOnHover={true}
             alphaParticles={true}
             disableRotation={false}
@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
           >
             <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-bold tracking-wider uppercase text-sm border border-blue-200">Why Us?</span>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 mt-4 tracking-tight text-gray-900 leading-tight">
-                Why leading brands choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">US</span>
+                Why leading brands choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">US</span>
             </h2>
             <p className="text-xl text-gray-600 mb-12 leading-relaxed">
               We combine creativity with technical expertise to deliver digital solutions that stand out. Here is why businesses trust us.
@@ -94,7 +94,7 @@ const WhyChooseUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-             <div className="absolute inset-0 bg-gradient-to-tr from-blue-200 to-purple-200 blur-[100px] opacity-60 rounded-full"></div>
+             <div className="absolute inset-0 bg-gradient-to-tr from-blue-200 to-green-200 blur-[100px] opacity-60 rounded-full"></div>
              
              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/40 z-10 group bg-white/30 backdrop-blur-sm p-2">
                 <img 
