@@ -156,10 +156,21 @@ const Hero = () => {
                    <p className="text-sm text-gray-500 font-medium">Satisfaction</p>
                </motion.div>
                 <div className="h-10 w-px bg-gray-200"></div>
-               <motion.div whileHover={{ scale: 1.05 }} className="cursor-default">
-                   <p className="text-3xl font-bold text-gray-900">24/7</p>
-                   <p className="text-sm text-gray-500 font-medium">Support</p>
-               </motion.div>
+               <motion.a 
+                   href="https://wa.me/918304968724"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   whileHover={{ scale: 1.05 }} 
+                   className="cursor-pointer block text-center group"
+               >
+                   <div className="flex items-center justify-center gap-2">
+                       <p className="text-3xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">24/7</p>
+                       <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-green-500">
+                           <path d="M12.0004 2c-5.5228 0-10 4.47715-10 10 0 1.7913.48316 3.4727 1.32896 4.9358l-1.32896 4.8624 4.97637-1.3259c1.4251.7981 3.0673 1.2577 4.8236 1.2577 5.5229 0 10-4.4772 10-10 0-5.52285-4.4771-10-10-10zm0 1.66667c4.6019 0 8.3333 3.73145 8.3333 8.33333 0 4.6019-3.7314 8.3333-8.3333 8.3333-1.4589 0-2.8256-.3767-4.0175-1.034l-.2869-.1581-2.97235.792.80996-2.9067-.16807-.2918c-.73273-1.2721-1.15181-2.7303-1.15181-4.2847 0-4.60188 3.73143-8.33333 8.33337-8.33333zm4.5826 11.23333c-.1933.5433-.9908 1.05-1.6041 1.0967-.4067.0308-.8717.0608-2.6175-.6575-1.9617-.8067-3.2375-2.8134-3.3375-2.9467-.1.135-.8025 1.0667-.8025 2.0308 0 .8575.4375 1.6708 1.0825 2.0075.0975.05.2125.0808.3333.0808.3842 0 .5842-.2625.7534-.51 0 0 .1516-.24.2691-.4541.1175-.2134.25-.4442.1159-.6934-.1342-.2491-.5642-.6475-.7834-.8458-.2191-.1983-.4375-.2391-.6558-.0408-.2183.1975-.4658.4683-.6658.7458-.2.2775-.4075.525-.2383.8725.17.3475.76.6242 1.3417.8283 2.6641.9325 3.3225.86 3.9116.8042.8725-.0825 1.3117-.79 1.5434-1.2309.2316-.4408.2458-.8575.1741-.9891-.0717-.1309-.2658-.205-0.5592-.3509z" />
+                       </svg>
+                   </div>
+                   <p className="text-sm text-gray-500 font-medium group-hover:text-green-600 transition-colors">Chat Support</p>
+               </motion.a>
             </motion.div>
           </motion.div>
 
@@ -254,16 +265,18 @@ const Hero = () => {
               </div>
 
                {/* Floating elements */}
-               <motion.div 
-                className="absolute -top-6 -right-6 bg-gradient-to-r from-blue-600 to-green-600 text-white p-4 rounded-2xl shadow-xl"
+               <motion.a 
+                href="https://wa.me/918304968724"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute -top-6 -right-6 bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 z-50 cursor-pointer flex items-center justify-center"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                >
-                 <div className="text-center">
-                    <p className="text-xs font-bold opacity-80">Support</p>
-                    <p className="font-extrabold text-xl">24/7 💬</p>
-                 </div>
-               </motion.div>
+                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+                     <path d="M12.0004 2c-5.5228 0-10 4.47715-10 10 0 1.7913.48316 3.4727 1.32896 4.9358l-1.32896 4.8624 4.97637-1.3259c1.4251.7981 3.0673 1.2577 4.8236 1.2577 5.5229 0 10-4.4772 10-10 0-5.52285-4.4771-10-10-10zm0 1.66667c4.6019 0 8.3333 3.73145 8.3333 8.33333 0 4.6019-3.7314 8.3333-8.3333 8.3333-1.4589 0-2.8256-.3767-4.0175-1.034l-.2869-.1581-2.97235.792.80996-2.9067-.16807-.2918c-.73273-1.2721-1.15181-2.7303-1.15181-4.2847 0-4.60188 3.73143-8.33333 8.33337-8.33333zm4.5826 11.23333c-.1933.5433-.9908 1.05-1.6041 1.0967-.4067.0308-.8717.0608-2.6175-.6575-1.9617-.8067-3.2375-2.8134-3.3375-2.9467-.1.135-.8025 1.0667-.8025 2.0308 0 .8575.4375 1.6708 1.0825 2.0075.0975.05.2125.0808.3333.0808.3842 0 .5842-.2625.7534-.51 0 0 .1516-.24.2691-.4541.1175-.2134.25-.4442.1159-.6934-.1342-.2491-.5642-.6475-.7834-.8458-.2191-.1983-.4375-.2391-.6558-.0408-.2183.1975-.4658.4683-.6658.7458-.2.2775-.4075.525-.2383.8725.17.3475.76.6242 1.3417.8283 2.6641.9325 3.3225.86 3.9116.8042.8725-.0825 1.3117-.79 1.5434-1.2309.2316-.4408.2458-.8575.1741-.9891-.0717-.1309-.2658-.205-0.5592-.3509z" />
+                 </svg>
+               </motion.a>
 
             </div>
           </motion.div>

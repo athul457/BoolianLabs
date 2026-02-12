@@ -10,6 +10,7 @@ import ContactPage from './pages/ContactPage';
 import BackToTop from './components/BackToTop';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import BlogPage from './pages/BlogPage';
 import CookiePolicy from './pages/CookiePolicy';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/blog" element={<BlogPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />

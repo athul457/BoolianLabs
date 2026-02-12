@@ -6,6 +6,7 @@ import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
 import SEO from '../components/SEO';
+import Blog from '../components/Blog';
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Services />
       <WhyChooseUs />
       <Portfolio />
+      <Blog />
       <Testimonials />
       <CTA />
     </main>

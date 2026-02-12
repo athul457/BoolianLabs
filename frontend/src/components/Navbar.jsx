@@ -26,6 +26,7 @@ const Navbar = () => {
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'About', path: '/about' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -78,7 +79,7 @@ const Navbar = () => {
               to="/contact"
                className="hidden md:flex items-center bg-gradient-to-r from-blue-600 to-green-500 text-white hover:brightness-110 px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Get Started <ChevronRight className="ml-1 h-3 w-3" />
+              Get a Quote <ChevronRight className="ml-1 h-3 w-3" />
             </Link>
 
             {/* Mobile Toggle */}
@@ -125,7 +126,7 @@ const Navbar = () => {
                 className="flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-green-500 hover:brightness-110 text-white px-4 py-4 rounded-xl font-bold shadow-lg transition-all"
                 onClick={() => setIsOpen(false)}
               >
-                Get Started Now <ChevronRight className="ml-2 h-4 w-4" />
+                Get a Quote<ChevronRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
           </div>
