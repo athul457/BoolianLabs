@@ -5,22 +5,6 @@ import Particles from './Particles';
 import { motion } from 'framer-motion';
 import WhatsAppIcon from './WhatsAppIcon';
 
-const FloatingShape = ({ className, delay }) => (
-  <motion.div
-    className={`absolute rounded-full opacity-20 mix-blend-multiply filter blur-xl ${className}`}
-    animate={{
-      y: [0, -20, 0],
-      x: [0, 10, 0],
-      scale: [1, 1.1, 1],
-    }}
-    transition={{
-      duration: 5,
-      repeat: Infinity,
-      delay: delay,
-      ease: "easeInOut",
-    }}
-  />
-);
 
 const TypingText = ({ text, className }) => {
   // Split text into letters
@@ -77,15 +61,6 @@ const Hero = () => {
     <section className="relative bg-white dark:bg-gray-900 text-gray-900 dark:text-white pt-48 pb-16 lg:py-32 overflow-hidden transition-colors duration-300">
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-0 left-1/4 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-blue-200/40 dark:bg-blue-900/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[60px] md:blur-[80px] opacity-70 animate-blob" />
-          <div className="absolute top-0 right-1/4 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-green-200/40 dark:bg-green-900/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[60px] md:blur-[80px] opacity-70 animate-blob animation-delay-2000" />
-          <div className="absolute -bottom-32 left-1/3 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-teal-200/40 dark:bg-teal-900/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[60px] md:blur-[80px] opacity-70 animate-blob animation-delay-4000" />
-          
-          {/* Small Floating Shapes */}
-          <FloatingShape className="w-16 h-16 md:w-24 md:h-24 bg-blue-300 dark:bg-blue-700 top-20 left-[10%]" delay={0} />
-          <FloatingShape className="w-20 h-20 md:w-32 md:h-32 bg-green-300 dark:bg-green-700 bottom-20 right-[10%]" delay={1} />
-          <FloatingShape className="w-10 h-10 md:w-16 md:h-16 bg-cyan-300 dark:bg-cyan-700 top-1/2 left-[5%]" delay={2} />
-          
           <Particles
               className="absolute inset-0 z-0"
               particleColors={['#2563eb', '#16a34a', '#0d9488']} // Blue, Green, Teal
@@ -184,7 +159,6 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
             <div className="relative transform rotate-y-12 transition-transform duration-500 hover:rotate-y-0">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-green-200 opacity-70 blur-3xl rounded-full"></div>
               
               <div className="relative bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl border border-white/40 dark:border-gray-700/40 rounded-[1.5rem] md:rounded-[2rem] p-4 md:p-8 shadow-2xl">
                 <div className="flex items-center justify-between mb-4 md:mb-8">
@@ -220,9 +194,9 @@ const Hero = () => {
                       whileHover={{ scale: 1.02 }}
                       className="bg-white/50 dark:bg-gray-700/50 p-2 md:p-4 rounded-xl flex items-center border border-white/60 dark:border-gray-600/30 shadow-sm transition-colors cursor-pointer hover:bg-white/80 dark:hover:bg-gray-700/80"
                     >
-                        <div className="bg-blue-100 dark:bg-blue-900/50 p-2 md:p-3 rounded-lg mr-3 md:mr-4">
+                        {/* <div className="bg-blue-100 dark:bg-blue-900/50 p-2 md:p-3 rounded-lg mr-3 md:mr-4">
                             <Globe className="h-4 w-4 md:h-6 md:w-6 text-blue-600 dark:text-blue-400" />
-                        </div>
+                        </div> */}
                         <div>
                             <p className="text-[10px] md:text-sm text-gray-500 dark:text-gray-400">Custom Development</p>
                             <p className="text-sm md:text-xl font-bold text-gray-900 dark:text-white">Tailored to You</p>
@@ -237,9 +211,9 @@ const Hero = () => {
                       whileHover={{ scale: 1.02 }}
                       className="bg-white/50 dark:bg-gray-700/50 p-2 md:p-4 rounded-xl flex items-center border border-white/60 dark:border-gray-600/30 shadow-sm transition-colors cursor-pointer hover:bg-white/80 dark:hover:bg-gray-700/80"
                     >
-                         <div className="bg-teal-100 dark:bg-teal-900/50 p-2 md:p-3 rounded-lg mr-3 md:mr-4">
+                         {/* <div className="bg-teal-100 dark:bg-teal-900/50 p-2 md:p-3 rounded-lg mr-3 md:mr-4">
                             <Smartphone className="h-4 w-4 md:h-6 md:w-6 text-teal-600 dark:text-teal-400" />
-                        </div>
+                        </div> */}
                         <div>
                             <p className="text-[10px] md:text-sm text-gray-500 dark:text-gray-400">Mobile Responsive</p>
                             <p className="text-sm md:text-xl font-bold text-gray-900 dark:text-white">Perfect on Any Device</p>
@@ -254,9 +228,9 @@ const Hero = () => {
                       whileHover={{ scale: 1.02 }}
                       className="bg-white/50 dark:bg-gray-700/50 p-2 md:p-4 rounded-xl flex items-center border border-white/60 dark:border-gray-600/30 shadow-sm transition-colors cursor-pointer hover:bg-white/80 dark:hover:bg-gray-700/80"
                     >
-                        <div className="bg-green-100 dark:bg-green-900/50 p-2 md:p-3 rounded-lg mr-3 md:mr-4">
+                        {/* <div className="bg-green-100 dark:bg-green-900/50 p-2 md:p-3 rounded-lg mr-3 md:mr-4">
                             <Search className="h-4 w-4 md:h-6 md:w-6 text-green-600 dark:text-green-400" />
-                        </div>
+                        </div> */}
                         <div>
                             <p className="text-[10px] md:text-sm text-gray-500 dark:text-gray-400">SEO Optimization</p>
                             <p className="text-sm md:text-xl font-bold text-gray-900 dark:text-white">Rank Higher</p>
@@ -270,11 +244,17 @@ const Hero = () => {
                 href="https://wa.me/918304968724"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute -top-3 -right-2 md:-top-6 md:-right-6 transition-all duration-300 z-50 cursor-pointer flex items-center justify-center hover:scale-110 drop-shadow-2xl"
+                className="absolute -top-3 -right-2 md:-top-6 md:-right-6 transition-all duration-300 z-50 cursor-pointer flex flex-col items-center justify-center hover:scale-110 drop-shadow-2xl group"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                >
-                 <WhatsAppIcon className="w-12 h-12 md:w-16 md:h-16" />
+                 <div className="absolute -top-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs font-bold px-3 py-1.5 rounded-lg pointer-events-none shadow-xl">
+                   Chat with us
+                   <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900 dark:bg-white rotate-45"></div>
+                 </div>
+                 <div className="rounded-full overflow-hidden flex items-center justify-center">
+                   <WhatsAppIcon className="w-10 h-10 md:w-12 md:h-12" />
+                 </div>
                </motion.a>
 
             </div>
@@ -286,3 +266,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

@@ -1,9 +1,8 @@
 import { services } from "../data/servicesData";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Sparkles, CheckCircle2 } from "lucide-react";
 import { useState, useRef } from "react";
 import Lottie from "lottie-react";
-
 // For the glassmorphic background visuals and icons based on index
 const bgColors = [
   "from-blue-500/30 to-purple-500/30",
@@ -33,17 +32,21 @@ const iconColors = [
 ];
 
 const ServiceRow = ({ service, index }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, margin: "400px 0px" });
+  
   // Determine if image/icon is on Left (even) or Right (odd) on large screens
   const isEven = index % 2 === 0;
   const colorIndex = index % bgColors.length;
   
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
-      className={`relative flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 lg:gap-16 items-center justify-between p-6 md:p-8 lg:p-12 w-full bg-white dark:bg-gray-800/60 rounded-[2rem] border border-gray-100 dark:border-gray-700/50 shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden group`}
+      className={`relative flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 lg:gap-16 items-center justify-between p-6 md:p-8 lg:p-12 w-full bg-white dark:bg-gray-800/60 rounded-[2rem] border border-gray-100 dark:border-gray-700/50 shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden group transform-gpu will-change-transform`}
     >
       {/* Glow effect behind the card internally */}
       <div className={`absolute top-1/2 ${isEven ? 'left-1/4' : 'right-1/4'} -translate-y-1/2 w-[300px] h-[300px] bg-gradient-to-tr ${bgColors[colorIndex]} blur-[100px] rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none`} />
@@ -53,12 +56,15 @@ const ServiceRow = ({ service, index }) => {
         <motion.div
            whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
            transition={{ duration: 0.5 }}
+           className="w-32 h-32 md:w-64 md:h-64 flex items-center justify-center transform-gpu"
         >
-          <Lottie 
-            animationData={service.animation}
-            loop={true}
-            className="w-32 h-32 md:w-64 md:h-64 drop-shadow-2xl"
-          />
+          {isInView ? (
+            <Lottie 
+              animationData={service.animation}
+              loop={true}
+              className="w-full h-full drop-shadow-2xl"
+            />
+          ) : null}
         </motion.div>
       </div>
 

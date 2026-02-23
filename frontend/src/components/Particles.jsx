@@ -225,6 +225,11 @@ const Particles = ({
       if (container.contains(gl.canvas)) {
         container.removeChild(gl.canvas);
       }
+      
+      // CRITICAL FIX: Explicitly destroy the WebGL context on unmount to prevent 
+      // "Too many active WebGL contexts" crashes during page navigation or scrolling.
+      const ext = gl.getExtension('WEBGL_lose_context');
+      if (ext) ext.loseContext();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [

@@ -131,8 +131,7 @@ export const services = [
   {
     animation: webAnimation,
     title: "Website Development",
-    description:
-      "Modern websites that build trust and help your business grow online.",
+    description: "Modern websites that build trust and help your business grow online.",
     subServices: [
       {
         title: "Custom Websites",
@@ -148,12 +147,10 @@ export const services = [
       }
     ]
   },
-
   {
     animation: marketingAnimation,
     title: "Digital Marketing",
-    description:
-      "Smart marketing strategies to increase visibility and reach more customers.",
+    description: "Smart marketing strategies to increase visibility and reach more customers.",
     subServices: [
       {
         title: "Social Media Marketing",
@@ -165,12 +162,10 @@ export const services = [
       }
     ]
   },
-
   {
     animation: mobileAnimation,
     title: "Mobile App Development",
-    description:
-      "User-friendly Android and iOS apps built for performance and growth.",
+    description: "User-friendly Android and iOS apps built for performance and growth.",
     subServices: [
       {
         title: "Cross-Platform Apps",
@@ -190,12 +185,10 @@ export const services = [
       }
     ]
   },
-
   {
     animation: erpAnimation,
     title: "ERP Development",
-    description:
-      "Custom systems to manage and automate your business operations.",
+    description: "Custom systems to manage and automate your business operations.",
     subServices: [
       {
         title: "Business Management System",
@@ -215,12 +208,10 @@ export const services = [
       }
     ]
   },
-
   {
     animation: aiAnimation,
     title: "AI Automation",
-    description:
-      "Automate repetitive tasks and improve efficiency with AI solutions.",
+    description: "Automate repetitive tasks and improve efficiency with AI solutions.",
     subServices: [
       {
         title: "Workflow Automation",
@@ -240,12 +231,10 @@ export const services = [
       }
     ]
   },
-
   {
     animation: blenderAnimation,
     title: "3D Modeling & Blender",
-    description:
-      "Professional 3D visuals for products, marketing, and presentations.",
+    description: "Professional 3D visuals for products, marketing, and presentations.",
     subServices: [
       {
         title: "Product Rendering",
@@ -268,8 +257,7 @@ export const services = [
   {
     animation: aidevAnimation,
     title: "AI Development",
-    description:
-      "Advanced artificial intelligence solutions to empower your business.",
+    description: "Advanced artificial intelligence solutions to empower your business.",
     subServices: [
       {
         title: "Prediction Models",

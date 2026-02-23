@@ -1,9 +1,11 @@
 import { Zap, HandCoins, Component, BarChart3, Headset, ArrowRight, ShieldCheck } from 'lucide-react';
 import Particles from './Particles';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useState, useRef } from 'react';
 
 const WhyChooseUs = () => {
+    const sectionRef = useRef(null);
+    const isSectionInView = useInView(sectionRef, { margin: "400px 0px" });
     const [activeMobileIndex, setActiveMobileIndex] = useState(0);
     const scrollRef = useRef(null);
 
@@ -62,13 +64,13 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden transition-colors duration-300" id="why-choose-us">
+    <section ref={sectionRef} className="py-16 md:py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden transition-colors duration-300" id="why-choose-us">
       {/* Background Elements */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100 dark:bg-blue-900/20 rounded-full mix-blend-multiply filter blur-[120px] opacity-30 animate-blob"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-100 dark:bg-purple-900/20 rounded-full mix-blend-multiply filter blur-[120px] opacity-30 animate-blob animation-delay-4000"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(#000_1px,transparent_1px)] dark:bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03]"></div>
-      </div>
+      {isSectionInView && (
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <div className="absolute inset-0 bg-[radial-gradient(#000_1px,transparent_1px)] dark:bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03]"></div>
+        </div>
+      )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 md:mb-24">
@@ -113,7 +115,7 @@ const WhyChooseUs = () => {
             {reasons.map((reason, index) => (
               <div key={index} className="min-w-full snap-center px-1">
                  <motion.div
-                  className={`relative h-full bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl p-6 rounded-2xl border border-white/20 dark:border-gray-700/50 shadow-lg flex flex-col justify-between`}
+                  className={`relative h-full bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl p-6 rounded-2xl border border-white/20 dark:border-gray-700/50 shadow-lg flex flex-col justify-between transform-gpu will-change-transform`}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -155,7 +157,7 @@ const WhyChooseUs = () => {
             return (
               <motion.div
                 key={index}
-                className={`relative group ${reason.colSpan} bg-white dark:bg-gray-800/60 backdrop-blur-xl p-8 rounded-[2rem] border border-gray-100 dark:border-gray-700/50 shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2 overflow-hidden flex flex-col justify-between`}
+                className={`relative group ${reason.colSpan} bg-white dark:bg-gray-800/60 backdrop-blur-xl p-8 rounded-[2rem] border border-gray-100 dark:border-gray-700/50 shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2 overflow-hidden flex flex-col justify-between transform-gpu will-change-transform`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -166,9 +168,6 @@ const WhyChooseUs = () => {
 
                 <div className="relative z-10">
                     <div className="mb-6 relative">
-                         {/* Animated Glow Behind */}
-                        <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        
                         {/* Gradient Border Container */}
                         <div className="relative w-16 h-16 p-[1px] rounded-2xl bg-gradient-to-br from-blue-500/50 via-purple-500/50 to-blue-500/50 group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-blue-500 transition-all duration-500 shadow-lg shadow-blue-500/10">
                         {/* Inner Glass Container */}
