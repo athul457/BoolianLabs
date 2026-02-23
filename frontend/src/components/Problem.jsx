@@ -1,25 +1,26 @@
-import { ArrowDown, Globe, Smartphone, TrendingDown, Clock, AlertTriangle } from 'lucide-react';
+import { ArrowDown, AlertTriangle } from 'lucide-react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { InvisibleIcon, OutdatedIcon, BrokenIcon, NoInquiriesIcon } from './icons/ProblemIcons';
 
 const Problem = () => {
   const problems = [
     {
-      icon: Globe,
+      icon: InvisibleIcon,
       title: "Invisible Online?",
       description: "No website means you don't exist to 90% of customers.",
     },
     {
-      icon: Clock,
+      icon: OutdatedIcon,
       title: "Outdated Design?",
       description: "A 2010-era site destroys trust before they even read a word.",
     },
     {
-      icon: Smartphone,
+      icon: BrokenIcon,
       title: "Mobile Broken?",
       description: "If it doesn't work on a phone, you're losing half your traffic.",
     },
     {
-      icon: TrendingDown,
+      icon: NoInquiriesIcon,
       title: "Not Receiving Enough Inquiries?",
       description: "Clear structure and messaging make a difference.",
     }

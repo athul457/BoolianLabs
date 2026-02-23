@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Phone, MessageCircle, Calendar } from 'lucide-react';
+import { motion } from 'framer-motion';
+import WhatsAppIcon from './WhatsAppIcon';
 
 const CTA = () => {
   return (
@@ -31,25 +33,64 @@ const CTA = () => {
                 to="/contact"
                 className="group bg-gradient-to-r from-blue-600 to-green-500 dark:bg-none dark:bg-white text-white dark:text-blue-900 hover:brightness-110 dark:hover:bg-blue-50 px-6 py-3 md:px-8 md:py-5 rounded-full font-bold text-base md:text-lg transition-all shadow-lg hover:shadow-xl dark:shadow-[0_0_20px_rgba(255,255,255,0.3)] transform hover:-translate-y-1 flex items-center justify-center"
             >
-                <Calendar className="mr-2 h-4 w-4 md:h-5 md:w-5 text-white dark:text-blue-900 transition-colors" />
-                Book Free Consultation
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    rotate: [0, 5, -5, 0]
+                  }}
+                  transition={{ 
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "easeInOut"
+                  }}
+                  className="mr-2"
+                >
+                  <Calendar className="h-4 w-4 md:h-5 md:w-5 text-white dark:text-blue-900 transition-colors" />
+                </motion.div>
+                Launch Your Project
             </Link>
             
             <a
-                href="tel:+91 9207108723"
+                href="tel:+91 8714180384"
                 className="group bg-white dark:bg-white/10 border border-gray-200 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/20 backdrop-blur-md px-6 py-3 md:px-8 md:py-5 rounded-full font-bold text-base md:text-lg transition-all flex items-center justify-center hover:-translate-y-1 shadow-sm dark:shadow-none"
             >
-                <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5 text-gray-900 dark:text-white" />
+                <motion.div
+                  animate={{ 
+                    rotate: [0, -10, 10, -10, 10, 0],
+                    scale: [1, 1.1, 1]
+                  }}
+                  transition={{ 
+                    duration: 2.5,
+                    repeat: Infinity,
+                    repeatDelay: 1,
+                    ease: "easeInOut"
+                  }}
+                  className="mr-2"
+                >
+                    <Phone className="h-4 w-4 md:h-5 md:w-5 text-gray-900 dark:text-white" />
+                </motion.div>
                 Call Now
             </a>
             
             <a
-                href="https://wa.me/919207108723"
+                href="https://wa.me/918714180384"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 md:px-8 md:py-5 rounded-full font-bold text-base md:text-lg transition-all shadow-lg hover:shadow-green-500/30 transform hover:-translate-y-1 flex items-center justify-center"
             >
-                <MessageCircle className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+                <motion.div
+                  animate={{ y: [0, -4, 0] }}
+                  transition={{ 
+                    duration: 1.5,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "easeInOut"
+                  }}
+                  className="mr-2"
+                >
+                    <WhatsAppIcon className="h-5 w-5 md:h-6 md:w-6" />
+                </motion.div>
                 WhatsApp
             </a>
             </div>

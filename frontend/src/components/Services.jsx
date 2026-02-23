@@ -1,40 +1,99 @@
 import { services } from "../data/servicesData";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+import { Sparkles, CheckCircle2 } from "lucide-react";
 import { useState, useRef } from "react";
+import Lottie from "lottie-react";
 
-// Internal Spotlight Card Component
-function SpotlightCard({ children, className = "" }) {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
+// For the glassmorphic background visuals and icons based on index
+const bgColors = [
+  "from-blue-500/30 to-purple-500/30",
+  "from-emerald-500/30 to-teal-500/30",
+  "from-orange-500/30 to-red-500/30",
+  "from-pink-500/30 to-rose-500/30",
+  "from-indigo-500/30 to-cyan-500/30",
+  "from-yellow-500/30 to-amber-500/30",
+];
 
-  function handleMouseMove({ currentTarget, clientX, clientY }) {
-    let { left, top } = currentTarget.getBoundingClientRect();
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  }
+const borderColors = [
+  "group-hover:border-blue-500/50",
+  "group-hover:border-emerald-500/50",
+  "group-hover:border-orange-500/50",
+  "group-hover:border-pink-500/50",
+  "group-hover:border-indigo-500/50",
+  "group-hover:border-yellow-500/50",
+];
 
+const iconColors = [
+  "text-blue-600 dark:text-blue-400",
+  "text-emerald-600 dark:text-emerald-400",
+  "text-orange-600 dark:text-orange-400",
+  "text-pink-600 dark:text-pink-400",
+  "text-indigo-600 dark:text-indigo-400",
+  "text-yellow-600 dark:text-yellow-400",
+];
+
+const ServiceRow = ({ service, index }) => {
+  // Determine if image/icon is on Left (even) or Right (odd) on large screens
+  const isEven = index % 2 === 0;
+  const colorIndex = index % bgColors.length;
+  
   return (
-    <div
-      className={`group relative border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden rounded-3xl ${className}`}
-      onMouseMove={handleMouseMove}
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+      className={`relative flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 lg:gap-16 items-center justify-between p-6 md:p-8 lg:p-12 w-full bg-white dark:bg-gray-800/60 rounded-[2rem] border border-gray-100 dark:border-gray-700/50 shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden group`}
     >
-      <motion.div
-        className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100"
-        style={{
-          background: useMotionTemplate`
-            radial-gradient(
-              650px circle at ${mouseX}px ${mouseY}px,
-              rgba(37, 99, 235, 0.15),
-              transparent 80%
-            )
-          `,
-        }}
-      />
-      <div className="relative h-full">{children}</div>
-    </div>
+      {/* Glow effect behind the card internally */}
+      <div className={`absolute top-1/2 ${isEven ? 'left-1/4' : 'right-1/4'} -translate-y-1/2 w-[300px] h-[300px] bg-gradient-to-tr ${bgColors[colorIndex]} blur-[100px] rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none`} />
+
+      {/* Visual Presentation Side */}
+      <div className="w-full lg:w-[40%] flex justify-center items-center relative z-10">
+        <motion.div
+           whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
+           transition={{ duration: 0.5 }}
+        >
+          <Lottie 
+            animationData={service.animation}
+            loop={true}
+            className="w-32 h-32 md:w-64 md:h-64 drop-shadow-2xl"
+          />
+        </motion.div>
+      </div>
+
+      {/* Content Side */}
+      <div className="w-full lg:w-[60%] flex flex-col justify-center space-y-4 lg:space-y-6 relative z-10">
+        <div>
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 dark:bg-gray-800 text-[10px] lg:text-xs font-bold text-blue-600 dark:text-blue-400 mb-4 uppercase tracking-widest border border-blue-100 dark:border-gray-700/80">
+            Service 0{index + 1}
+          </div>
+          <h3 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 lg:mb-4 leading-tight font-outfit">
+            {service.title}
+          </h3>
+          <p className="text-sm md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            {service.description}
+          </p>
+        </div>
+
+        {/* Deliverables List (Shows all) */}
+        {service.subServices && (
+          <div className="mt-auto pt-5 lg:pt-6 border-t border-gray-100 dark:border-gray-700/50">
+            <h4 className="text-[11px] lg:text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider">Key Deliverables</h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
+              {service.subServices.map((sub, i) => (
+                <div key={i} className="flex items-start">
+                  <CheckCircle2 className={`w-4 h-4 lg:w-6 lg:h-6 ${iconColors[colorIndex]} mr-2.5 flex-shrink-0 mt-0.5`} strokeWidth={2.5}/>
+                  <span className="text-[13px] lg:text-base text-gray-700 dark:text-gray-300 font-medium leading-tight">{sub.title}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </motion.div>
   );
-}
+};
 
 const Services = () => {
   const [mobileActiveIndex, setMobileActiveIndex] = useState(0);
@@ -58,158 +117,77 @@ const Services = () => {
   };
 
   return (
-    <section className="py-16 md:py-20 bg-white dark:bg-gray-900 relative overflow-hidden transition-colors duration-300" id="services">
-      {/* Background Ambience - Matching Hero */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-200/20 dark:bg-blue-900/10 rounded-full blur-[128px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-green-200/20 dark:bg-green-900/10 rounded-full blur-[128px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <section className="py-24 md:py-32 bg-white dark:bg-gray-900 relative transition-colors duration-300 overflow-hidden" id="services">
+      {/* Background Ambience */}
+      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.02] dark:opacity-[0.04] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-purple-500/10 rounded-full blur-[120px] pointer-events-none" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Header */}
-        <div className="text-center mb-20 max-w-3xl mx-auto">
-          <div className="inline-flex items-center px-3 py-1 rounded-full border border-green-100 dark:border-green-900 bg-green-50/50 dark:bg-green-900/20 backdrop-blur-sm mb-6">
-            <Sparkles className="w-4 h-4 text-green-600 dark:text-green-400 mr-2" />
-            <span className="text-xs font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider font-roboto-condensed">World-Class Expertise</span>
-          </div>
+        {/* Huge Premium Header */}
+        <div className="text-center mb-16 lg:mb-24 max-w-3xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center px-4 py-1.5 rounded-full border border-blue-100 dark:border-blue-900 bg-blue-50/50 dark:bg-blue-900/20 backdrop-blur-sm mb-6"
+          >
+            <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400 mr-2" />
+            <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Our Expertise</span>
+          </motion.div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 font-outfit tracking-tight">
-            Digital Solutions That <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">Elevate Your Brand</span>
-          </h2>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 lg:mb-8 font-outfit tracking-tight leading-tight"
+          >
+            Capabilities that <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Scale</span>
+          </motion.h2>
           
-          <p className="text-lg text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
-            We blend creativity with technology to build digital experiences that are not just functional, but unforgettable.
-          </p>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto"
+          >
+            We transform ambitious ideas into digital reality through structured, scalable technology and pristine design architectures.
+          </motion.p>
         </div>
 
-        {/* ================= MOBILE CAROUSEL (Visible < md) ================= */}
-        <div className="md:hidden relative mb-12">
+        {/* Desktop Zig-Zag Rows & Mobile Carousel */}
+        <div className="relative">
           <div 
             ref={scrollRef}
             onScroll={handleScroll}
-            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-6 px-6"
+            className="flex lg:block overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none scrollbar-hide lg:space-y-48 pb-4 -mx-4 px-4 lg:mx-0 lg:px-0 lg:pb-0"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div key={service.title} className="min-w-full snap-center px-6">
-                  <SpotlightCard className="h-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
-                    <div className="p-6 h-full flex flex-col relative z-20">
-                      
-                      <div className="mb-4">
-                        {/* Icon removed for mobile as requested */}
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 font-outfit">
-                          {service.title}
-                        </h3>
-                      </div>
-
-                      <div className="relative overflow-hidden transition-all duration-300 border-l-2 border-gray-100 dark:border-gray-800 pl-4">
-                        {service.subServices ? (
-                          <div className="space-y-3">
-                             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-sans mb-3">
-                               {service.description}
-                             </p>
-                             <div className="space-y-2 pt-2 border-t border-gray-100 dark:border-gray-800">
-                                <p className="text-[10px] font-bold text-green-600 dark:text-green-400 uppercase tracking-wider">Features</p>
-                                {service.subServices.map((sub, i) => (
-                                  <div key={i} className="flex items-start">
-                                    <span className="w-1 h-1 rounded-full bg-green-500 mt-1.5 mr-2 flex-shrink-0"></span>
-                                    <p className="text-xs text-gray-600 dark:text-gray-400">{sub.title}</p>
-                                  </div>
-                                ))}
-                             </div>
-                          </div>
-                        ) : (
-                          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
-                            {service.description}
-                          </p>
-                        )}
-                      </div>
-
-                    </div>
-                  </SpotlightCard>
-                </div>
-              );
-            })}
+            {services.map((service, index) => (
+               <div key={index} className="w-full lg:w-auto snap-center px-2 lg:px-0 flex-shrink-0 lg:flex-shrink self-stretch flex">
+                 <ServiceRow service={service} index={index} />
+               </div>
+            ))}
           </div>
 
-          {/* Dots Indicator */}
-          <div className="flex justify-center space-x-2 mt-6">
+          {/* Dotted Indicators for Mobile */}
+          <div className="lg:hidden flex justify-center mt-8 space-x-2">
             {services.map((_, index) => (
               <button
                 key={index}
                 onClick={() => scrollToSlide(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   mobileActiveIndex === index 
-                    ? "w-8 bg-green-500" 
-                    : "w-2 bg-gray-300 dark:bg-gray-700 hover:bg-green-300"
+                    ? "w-8 bg-blue-600" 
+                    : "w-2 bg-gray-300 dark:bg-gray-700"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
-        </div>
-
-        {/* Creative Grid (Desktop Only) */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-
-            return (
-              <SpotlightCard key={service.title} className="h-full">
-                <div className="p-8 h-full flex flex-col relative z-20">
-                  
-                  {/* Icon & Title */}
-                  <div className="mb-6">
-                    <div className="w-14 h-14 bg-gray-50 dark:bg-gray-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-gray-100 dark:border-gray-700 group-hover:border-green-500/30">
-                      <Icon className="w-7 h-7 text-gray-600 dark:text-gray-300 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors" strokeWidth={1.5} />
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 font-outfit group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
-                      {service.title}
-                    </h3>
-                  </div>
-
-                  {/* Content Container with Expand on Hover */}
-                  <div className="relative overflow-hidden transition-all duration-500 ease-in-out border-l-2 border-gray-100 dark:border-gray-800 pl-4 group-hover:border-green-500 group-hover:pl-4">
-                    
-                    {service.subServices ? (
-                      <div className="space-y-4">
-                        <p className="text-sm text-gray-500 dark:text-gray-400 font-roboto-condensed uppercase tracking-wider mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 absolute group-hover:relative -top-4 group-hover:top-0">
-                          Included Services
-                        </p>
-                        
-                         {/* Default Description (Shows when not hovered) */}
-                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans group-hover:hidden transition-all duration-300">
-                           {service.description}
-                         </p>
-
-                        {/* Sub-services (Shows on hover) */}
-                        <div className="hidden group-hover:block space-y-3 animate-fadeIn">
-                          {service.subServices.map((sub, i) => (
-                            <div key={i} className="group/item">
-                              <h4 className="text-sm font-semibold text-gray-900 dark:text-white flex items-center">
-                                <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-2 opacity-0 group-hover/item:opacity-100 transition-opacity"></span>
-                                {sub.title}
-                              </h4>
-                              <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 ml-3.5 leading-relaxed">
-                                {sub.description}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ) : (
-                      <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
-                        {service.description}
-                      </p>
-                    )}
-                  </div>
-
-                </div>
-              </SpotlightCard>
-            );
-          })}
         </div>
 
       </div>
@@ -218,5 +196,3 @@ const Services = () => {
 };
 
 export default Services;
-
-

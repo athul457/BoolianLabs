@@ -89,7 +89,7 @@ const AboutPage = () => {
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Our Story</h2>
                     <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                        Founded in 2020, we started with a simple mission: to help small businesses navigate the digital world. What began as a two-person team has grown into a full-service digital agency with clients across the globe.
+                        Founded in 2022, we started with a simple mission: to help small businesses navigate the digital world. What began as a two-person team has grown into a full-service digital agency with clients across the globe.
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                         We believe in the power of good design and robust engineering. Our approach is collaborative and data-driven, ensuring that every project we undertake delivers measurable results.

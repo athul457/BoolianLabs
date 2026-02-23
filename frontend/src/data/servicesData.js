@@ -119,11 +119,17 @@
 // ];
 
 
-import { Monitor, TrendingUp, Smartphone, Database, Bot, Box } from "lucide-react";
+import webAnimation from "../assets/lottie/web.json";
+import marketingAnimation from "../assets/lottie/marketing.json";
+import mobileAnimation from "../assets/lottie/mobile.json";
+import erpAnimation from "../assets/lottie/erp.json";
+import aiAnimation from "../assets/lottie/ai.json";
+import blenderAnimation from "../assets/lottie/blender.json";
+import aidevAnimation from "../assets/lottie/aidev.json";
 
 export const services = [
   {
-    icon: Monitor,
+    animation: webAnimation,
     title: "Website Development",
     description:
       "Modern websites that build trust and help your business grow online.",
@@ -144,7 +150,7 @@ export const services = [
   },
 
   {
-    icon: TrendingUp,
+    animation: marketingAnimation,
     title: "Digital Marketing",
     description:
       "Smart marketing strategies to increase visibility and reach more customers.",
@@ -161,7 +167,7 @@ export const services = [
   },
 
   {
-    icon: Smartphone,
+    animation: mobileAnimation,
     title: "Mobile App Development",
     description:
       "User-friendly Android and iOS apps built for performance and growth.",
@@ -186,7 +192,7 @@ export const services = [
   },
 
   {
-    icon: Database,
+    animation: erpAnimation,
     title: "ERP Development",
     description:
       "Custom systems to manage and automate your business operations.",
@@ -211,7 +217,7 @@ export const services = [
   },
 
   {
-    icon: Bot,
+    animation: aiAnimation,
     title: "AI Automation",
     description:
       "Automate repetitive tasks and improve efficiency with AI solutions.",
@@ -236,7 +242,7 @@ export const services = [
   },
 
   {
-    icon: Box,
+    animation: blenderAnimation,
     title: "3D Modeling & Blender",
     description:
       "Professional 3D visuals for products, marketing, and presentations.",
@@ -256,6 +262,26 @@ export const services = [
       {
         title: "Web & AR Assets",
         description: "Optimized 3D assets for digital platforms."
+      }
+    ]
+  },
+  {
+    animation: aidevAnimation,
+    title: "AI Development",
+    description:
+      "Advanced artificial intelligence solutions to empower your business.",
+    subServices: [
+      {
+        title: "Prediction Models",
+        description: "Data-driven forecasting and predictive analytics systems."
+      },
+      {
+        title: "Detection Systems",
+        description: "Object, anomaly, and pattern recognition technologies."
+      },
+      {
+        title: "Generative AI",
+        description: "Custom models for automated content creation and processing."
       }
     ]
   }

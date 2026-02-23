@@ -8,7 +8,7 @@ const ContactPage = () => {
     <div className="pt-16 mt-16 bg-white dark:bg-gray-900 transition-colors duration-300">
       <SEO 
         title="Contact Us" 
-        description="Get in touch with BoolianLabs. Let's start a conversation about your project." 
+        description="Get in touch with Boolean Technologies. Let's start a conversation about your project." 
         keywords="contact us, hire web designer, project inquiry, consultation"
       />
        <section className="relative text-gray-900 dark:text-white py-12 md:py-16 text-center overflow-hidden transition-colors duration-300">

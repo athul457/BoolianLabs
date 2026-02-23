@@ -28,7 +28,7 @@ const Contact = () => {
     const startTime = dateObj.toISOString().replace(/-|:|\.\d\d\d/g, "");
     const endTime = new Date(dateObj.getTime() + 30 * 60000).toISOString().replace(/-|:|\.\d\d\d/g, "");
     
-    const subject = "BoolianLabs Callback Request";
+    const subject = "Boolean Technologies Callback Request";
     const details = encodeURIComponent(`Name: ${formValues.user_name}\nPhone: ${formValues.user_phone}\nEmail: ${formValues.user_email}\n\nMessage: ${formValues.message}`);
     const location = encodeURIComponent("Phone Call");
     
@@ -211,21 +211,21 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Phone Number</h4>
-                    <p className="text-gray-600 dark:text-gray-300">+91 8304968724</p>
+                    <p className="text-gray-600 dark:text-gray-300">+91 8714180384</p>
                   </div>
                 </a>
 
-                <a href="mailto:hello@boolianlabs.com" className="flex items-start group">
+                <a href="mailto:hello@booleantechnologies.com" className="flex items-start group">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-xl mr-5 border border-blue-200 dark:border-blue-800 group-hover:bg-blue-600 transition-colors duration-300">
                     <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400 group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Email Address</h4>
-                    <p className="text-gray-600 dark:text-gray-300">hello@boolianlabs.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">hello@booleantechnologies.com</p>
                   </div>
                 </a>
 
-                <a href="https://wa.me/918304968724" target="_blank" rel="noopener noreferrer" className="flex items-start group">
+                <a href="https://wa.me/918714180384" target="_blank" rel="noopener noreferrer" className="flex items-start group">
                   <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-xl mr-5 border border-green-200 dark:border-green-800 group-hover:bg-green-600 transition-colors duration-300">
                     <MessageCircle className="h-6 w-6 text-green-600 dark:text-green-400 group-hover:text-white transition-colors" />
                   </div>

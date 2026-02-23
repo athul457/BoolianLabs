@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, keywords, url, image }) => {
-  const siteTitle = "BoolianLabs";
+  const siteTitle = "Boolean Technologies";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   const siteUrl = "https://your-agency-site.com"; // Replace with actual URL
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;

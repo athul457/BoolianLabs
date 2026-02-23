@@ -23,6 +23,7 @@ export default {
             blob: "blob 7s infinite",
             'gradient-x': 'gradient-x 15s ease infinite',
             'spin-slow': 'spin 3s linear infinite',
+            shine: "shine 1.5s linear infinite",
         },
         keyframes: {
             blob: {
@@ -48,6 +49,10 @@ export default {
                     'background-size': '200% 200%',
                     'background-position': 'right center',
                 },
+            },
+            shine: {
+                "0%": { left: "-100%" },
+                "100%": { left: "200%" },
             },
         },
       },

@@ -64,19 +64,19 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center group">
-              <img src="/favicon.svg" alt="BoolianLabs Logo" className="h-16 w-auto group-hover:scale-105 transition-transform duration-300" />
-              <span className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent font-dancing ml-2">BoolianLabs</span>
+              <img src="/favicon.svg" alt="Boolean Technologies Logo" className="h-16 w-auto group-hover:scale-105 transition-transform duration-300" />
+              <span className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent font-dancing ml-2">Boolean Technologies</span>
             </Link>
           </div>
 
           {/* Desktop Menu - Centered */}
           <div className="hidden md:flex flex-1 justify-center items-center space-x-1">
-            <div className={`backdrop-blur-md rounded-full px-2 py-1.5 border flex items-center space-x-1 ${scrolled || location.pathname !== '/' ? 'bg-white/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700' : 'bg-white/30 dark:bg-black/30 border-white/40 shadow-sm'}`}>
+            <div className="flex items-center space-x-1">
                 {navLinks.map((link) => (
                 <Link
                     key={link.name}
                     to={link.path}
-                    className={`relative px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 group font-roboto-condensed ${isActive(link.path)}`}
+                    className={`relative px-5 py-2 text-sm font-medium transition-all duration-300 group font-roboto-condensed ${isActive(link.path)}`}
                 >
                     <span className="relative">
                         {link.name}
@@ -168,9 +168,9 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${
+                className={`block px-4 py-3 text-base font-medium transition-all ${
                   location.pathname === link.path
-                    ? 'bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 border border-teal-100 dark:border-teal-800'
+                    ? 'bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400'
                     : 'text-gray-600 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-green-900/30 hover:text-green-600 dark:hover:text-green-400'
                 }`}
                 onClick={() => setIsOpen(false)}

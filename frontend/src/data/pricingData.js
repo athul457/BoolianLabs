@@ -1,8 +1,8 @@
 export const pricing = [
   {
     title: "Starter",
-    price: "₹14,999",
-    originalPrice: "₹24,999",
+    price: "₹4,999",
+    originalPrice: "₹12,999",
     features: [
       "Professional Website (5 Pages)",
       "Mobile Responsive Design",
@@ -15,8 +15,8 @@ export const pricing = [
   },
   {
     title: "Growth",
-    price: "₹49,999",
-    originalPrice: "₹79,999",
+    price: "₹11,999",
+    originalPrice: "₹22,999",
     features: [
       "E-commerce / Web App (10+ Pages)",
       "Mobile App Development (Android/iOS)",

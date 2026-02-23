@@ -187,22 +187,7 @@ const Portfolio = () => {
             </p>
           </div>
           
-          <div className="flex space-x-4">
-            <button 
-              onClick={() => scroll('left')}
-              className="p-4 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all shadow-sm hover:shadow-md group"
-              aria-label="Scroll left"
-            >
-              <ChevronLeft className="h-6 w-6 group-hover:-translate-x-1 transition-transform" />
-            </button>
-            <button 
-              onClick={() => scroll('right')}
-              className="p-4 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all shadow-sm hover:shadow-md group"
-              aria-label="Scroll right"
-            >
-              <ChevronRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
+    
         </div>
 
         <motion.div 
@@ -253,7 +238,7 @@ const Portfolio = () => {
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
                         {project.title}
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-6 line-clamp-3">
+                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
                         {project.description}
                     </p>
                   </div>

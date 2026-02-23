@@ -7,7 +7,7 @@ import PortfolioPage from './pages/PortfolioPage';
 import PricingPage from './pages/PricingPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import BackToTop from './components/BackToTop';
+import WhatsAppChatButton from './components/WhatsAppChatButton';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import BlogPage from './pages/BlogPage';
@@ -36,7 +36,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <BackToTop />
+        <WhatsAppChatButton />
       </div>
     </Router>
   );
