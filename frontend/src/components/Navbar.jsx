@@ -65,7 +65,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center group">
               <img src="/favicon.svg" alt="Boolean Technologies Logo" className="h-16 w-auto group-hover:scale-105 transition-transform duration-300" />
-              <span className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent font-dancing ml-2">Boolean Technologies</span>
+              <span className="hidden md:block text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent font-dancing ml-2">Boolean Technologies</span>
             </Link>
           </div>
 
