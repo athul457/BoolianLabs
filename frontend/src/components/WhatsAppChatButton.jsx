@@ -22,7 +22,7 @@ const WhatsAppChatButton = () => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  const phoneNumber = "918714180384"; // Replace with actual WhatsApp number (Added 91 country code for India structure)
+  const phoneNumber = "917676074209"; // Replace with actual WhatsApp number (Added 91 country code for India structure)
   const message = "Hi, I would like to know more about your services!"; // Default message
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

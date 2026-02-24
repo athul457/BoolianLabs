@@ -32,7 +32,7 @@ const CTA = () => {
             </Link>
 
             <a
-              href="tel:+918714180384"
+              href="tel:+917676074209"
               className="px-8 py-4 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white rounded-full font-bold hover:bg-gray-100 dark:hover:bg-gray-600 transition-all flex items-center justify-center"
             >
               <Phone className="mr-2 h-5 w-5" />
@@ -40,7 +40,7 @@ const CTA = () => {
             </a>
 
             <a
-              href="https://wa.me/918714180384"
+              href="https://wa.me/917676074209"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-[#25D366] text-white rounded-full font-bold hover:bg-[#20bd5a] transition-all flex items-center justify-center shadow-md"

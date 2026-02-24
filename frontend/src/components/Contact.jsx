@@ -211,7 +211,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Phone Number</h4>
-                    <p className="text-gray-600 dark:text-gray-300">+91 8714180384</p>
+                    <p className="text-gray-600 dark:text-gray-300">+91 7676074209</p>
                   </div>
                 </a>
 
@@ -225,7 +225,7 @@ const Contact = () => {
                   </div>
                 </a>
 
-                <a href="https://wa.me/918714180384" target="_blank" rel="noopener noreferrer" className="flex items-start group">
+                <a href="https://wa.me/917676074209" target="_blank" rel="noopener noreferrer" className="flex items-start group">
                   <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-xl mr-5 border border-green-200 dark:border-green-800 group-hover:bg-green-600 transition-colors duration-300">
                     <MessageCircle className="h-6 w-6 text-green-600 dark:text-green-400 group-hover:text-white transition-colors" />
                   </div>

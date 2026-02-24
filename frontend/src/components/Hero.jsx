@@ -133,7 +133,7 @@ const Hero = () => {
                </motion.div>
                 <div className="h-8 md:h-10 w-px bg-gray-200 dark:bg-gray-700"></div>
                <motion.a 
-                   href="https://wa.me/918714180384"
+                   href="https://wa.me/917676074209"
                    target="_blank"
                    rel="noopener noreferrer"
                    whileHover={{ scale: 1.05 }} 
