@@ -98,7 +98,7 @@ const Contact = () => {
                 <form ref={form} onSubmit={sendEmail}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                    <label htmlFor="user_name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                    <label htmlFor="user_name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
                     <input 
                         type="text" 
                         name="user_name"
@@ -129,7 +129,7 @@ const Contact = () => {
                         name="user_phone"
                         id="user_phone" 
                         className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all shadow-sm"
-                        placeholder="+1 (555) 000-0000"
+                        placeholder="+91 9876543210"
                     />
                     </div>
                     <div>

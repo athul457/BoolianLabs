@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 
 const ContactPage = () => {
   return (
-    <div className="pt-16 mt-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="pt-20 md:pt-28 bg-white dark:bg-gray-900 transition-colors duration-300">
       <SEO 
         title="Contact Us" 
         description="Get in touch with Boolean Technologies. Let's start a conversation about your project." 

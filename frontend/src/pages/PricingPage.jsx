@@ -8,13 +8,13 @@ import FAQ from '../components/FAQ';
 
 const PricingPage = () => {
   return (
-    <div className="pt-16 md:pt-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="pt-20 md:pt-28 bg-white dark:bg-gray-900 transition-colors duration-300">
       <SEO 
         title="Pricing" 
         description="Transparent pricing packages for every business size. No hidden fees." 
         keywords="web design pricing, development packages, affordable websites"
       />
-      <section className="relative text-gray-900 dark:text-white py-10 md:py-16 text-center overflow-hidden transition-colors duration-300">
+      <section className="relative text-gray-900 dark:text-white py-4 md:py-16 text-center overflow-hidden transition-colors duration-300">
         <div className="absolute inset-0 z-0">
              <Particles
                 particleColors={['#3b82f6', '#8b5cf6', '#e2e8f0']}

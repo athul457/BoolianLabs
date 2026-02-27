@@ -15,14 +15,14 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="pt-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="pt-16 md:pt-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <SEO 
         title="About Us - Digital Agency" 
         description="Learn about our mission, vision, and the team driving your digital success."
       />
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-12 md:py-20 lg:py-32 overflow-hidden">
          <div className="absolute inset-0 z-0 pointer-events-none">
              <Particles
                 particleColors={['#3b82f6', '#10b981']}

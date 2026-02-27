@@ -163,12 +163,12 @@ const Navbar = () => {
             isOpen ? 'opacity-100 scale-y-100 max-h-screen' : 'opacity-0 scale-y-0 max-h-0 overflow-hidden'
         }`}
       >
-          <div className="px-4 py-6 space-y-2">
+          <div className="px-4 py-4 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`block px-4 py-3 text-base font-medium transition-all ${
+                className={`block px-4 py-2.5 text-base font-medium transition-all ${
                   location.pathname === link.path
                     ? 'bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400'
                     : 'text-gray-600 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-green-900/30 hover:text-green-600 dark:hover:text-green-400'

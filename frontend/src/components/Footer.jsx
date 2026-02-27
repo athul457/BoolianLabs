@@ -85,47 +85,47 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-6 text-gray-900 dark:text-white">Services</h3>
             <ul className="space-y-4">
               <li>
-                <Link to="/services" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group">
+                <span className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all flex items-center group cursor-default hover:translate-x-1 duration-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Web Development
-                </Link>
+                </span>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group">
+                <span className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all flex items-center group cursor-default hover:translate-x-1 duration-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Digital Marketing
-                </Link>
+                </span>
               </li>
 
               <li>
-                <Link to="/services" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group">
+                <span className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all flex items-center group cursor-default hover:translate-x-1 duration-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Mobile App Development
-                </Link>
+                </span>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group">
+                <span className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all flex items-center group cursor-default hover:translate-x-1 duration-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     AI Automation
-                </Link>
+                </span>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group">
+                <span className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all flex items-center group cursor-default hover:translate-x-1 duration-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                    ERP Development
-                </Link>
+                </span>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group">
+                <span className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all flex items-center group cursor-default hover:translate-x-1 duration-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                    3D Modeling & Blender
-                </Link>
+                </span>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group">
+                <span className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all flex items-center group cursor-default hover:translate-x-1 duration-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                    AI Development
-                </Link>
+                </span>
               </li>
 
             </ul>

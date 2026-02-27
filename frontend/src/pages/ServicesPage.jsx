@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const ServicesPage = () => {
   return (
-    <div className="pt-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 min-h-screen"> {/* Add padding for fixed navbar */}
+    <div className="pt-16 md:pt-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 min-h-screen"> {/* Add padding for fixed navbar */}
       <Services />
       
       {/* Testimonials Section */}
