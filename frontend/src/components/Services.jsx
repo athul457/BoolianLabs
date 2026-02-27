@@ -42,11 +42,11 @@ const ServiceRow = ({ service, index }) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
-      className={`relative flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 lg:gap-16 items-center justify-between p-6 md:p-8 lg:p-12 w-full bg-white dark:bg-gray-800/60 rounded-[2rem] border border-gray-100 dark:border-gray-700/50 shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden group transform-gpu will-change-transform`}
+      className={`relative h-full flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 lg:gap-16 items-center justify-between p-6 md:p-8 lg:p-12 w-full bg-white dark:bg-gray-800/60 rounded-[2rem] border border-gray-100 dark:border-gray-700/50 shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden group transform-gpu will-change-transform`}
     >
       {/* Glow effect behind the card internally */}
       <div className={`absolute top-1/2 ${isEven ? 'left-1/4' : 'right-1/4'} -translate-y-1/2 w-[300px] h-[300px] bg-gradient-to-tr ${bgColors[colorIndex]} blur-[100px] rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none`} />
@@ -173,7 +173,7 @@ const Services = () => {
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {services.map((service, index) => (
-               <div key={index} className="w-full lg:w-auto snap-center px-2 lg:px-0 flex-shrink-0 lg:flex-shrink self-stretch flex">
+               <div key={index} className="w-full lg:w-auto snap-center px-4 lg:px-0 flex-shrink-0 lg:flex-shrink self-stretch flex items-stretch">
                  <ServiceRow service={service} index={index} />
                </div>
             ))}

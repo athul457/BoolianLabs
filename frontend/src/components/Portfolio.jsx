@@ -33,9 +33,9 @@ const Portfolio = () => {
             const firstChild = container.firstElementChild;
             if (!firstChild) return;
             
-            // Calculate item width including gap (32px = 2rem)
+            // Calculate item width including gap dynamically
             const itemWidth = firstChild.clientWidth;
-            const gap = 32;
+            const gap = parseFloat(window.getComputedStyle(container).gap) || 0;
             const scrollPos = container.scrollLeft;
             
             const index = Math.round(scrollPos / (itemWidth + gap));
@@ -54,7 +54,8 @@ const Portfolio = () => {
     const container = scrollContainerRef.current;
     if (container) {
       const firstChild = container.firstElementChild;
-      const scrollAmount = firstChild ? firstChild.clientWidth + 32 : 400;
+      const gap = parseFloat(window.getComputedStyle(container).gap) || 0;
+      const scrollAmount = firstChild ? firstChild.clientWidth + gap : 400;
       
       container.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
@@ -67,7 +68,8 @@ const Portfolio = () => {
     const container = scrollContainerRef.current;
     if (container) {
         const firstChild = container.firstElementChild;
-        const scrollAmount = firstChild ? firstChild.clientWidth + 32 : 0;
+        const gap = parseFloat(window.getComputedStyle(container).gap) || 0;
+        const scrollAmount = firstChild ? firstChild.clientWidth + gap : 0;
         
         container.scrollTo({
             left: index * scrollAmount,
@@ -103,14 +105,14 @@ const Portfolio = () => {
 
         <div 
           ref={scrollContainerRef}
-          className="flex overflow-x-auto gap-8 pb-12 scroll-smooth scrollbar-hide snap-x snap-mandatory perspective-1000 px-2"
+          className="flex overflow-x-auto gap-8 sm:gap-12 lg:gap-16 pb-12 scroll-smooth scrollbar-hide snap-x snap-mandatory perspective-1000 px-4 md:px-8"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
           {portfolio.map((project, index) => (
             <div 
               key={project.id} 
-              className="w-[400px] flex-shrink-0 snap-center group"
+              className="w-[360px] sm:w-[350px] md:w-[400px] flex-shrink-0 snap-center group"
             >
               <div className="bg-white dark:bg-gray-800 rounded-[2rem] overflow-hidden border border-gray-200 dark:border-gray-700 shadow-xl transition-all h-full flex flex-col">
                 <div className="relative overflow-hidden h-64 p-3">
@@ -136,17 +138,17 @@ const Portfolio = () => {
                    </div>
                 </div>
                 
-                <div className="p-8 pt-4 flex-grow flex flex-col justify-between">
+                <div className="p-6 md:p-8 pt-4 flex-grow flex flex-col justify-between">
                   <div>
                     <div className="mb-4">
                         <span className="px-3 py-1 rounded-full bg-blue-100/50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
                             {project.category}
                         </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 md:mb-3 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                         {project.title}
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
+                    <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-4 md:mb-6">
                         {project.description}
                     </p>
                   </div>
