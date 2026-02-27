@@ -1,5 +1,7 @@
 # 🌐 WebCraft Agency – Website Development Platform
 
+**Live Demo:** [https://boolian-labs.vercel.app/](https://boolian-labs.vercel.app/)
+
 ## 📌 Overview
 
 **WebCraft Agency** is a modern web development platform designed to showcase and deliver high-quality static and dynamic websites for businesses, product sellers, and service professionals.
@@ -12,6 +14,22 @@ This platform acts as a lead-generation website and portfolio system, offering:
 -   **Secure Testimonial Management System** (Waitlist/Approval Workflow)
 
 The primary goal is to attract clients, generate inquiries, and manage testimonials securely.
+
+---
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="frontend/public/screenshots/image1.png" width="800" alt="Homepage view" style="border-radius: 8px; margin-bottom: 20px;" />
+  <br/>
+  <img src="frontend/public/screenshots/image2.png" width="800" alt="Services view" style="border-radius: 8px; margin-bottom: 20px;" />
+  <br/>
+  <img src="frontend/public/screenshots/image3.png" width="800" alt="Portfolio view" style="border-radius: 8px; margin-bottom: 20px;" />
+  <br/>
+  <img src="frontend/public/screenshots/image4.png" width="800" alt="Pricing view" style="border-radius: 8px; margin-bottom: 20px;" />
+  <br/>
+  <img src="frontend/public/screenshots/image5.png" width="800" alt="Contact view" style="border-radius: 8px; margin-bottom: 20px;" />
+</p>
 
 ---
 
