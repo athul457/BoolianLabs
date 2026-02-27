@@ -83,7 +83,7 @@ const Contact = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
           {/* Contact Form - Matches Hero Glass Card */}
           <motion.div 
             className="relative transform transition-transform duration-500 hover:scale-[1.01]"
@@ -94,7 +94,7 @@ const Contact = () => {
           >
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-purple-200 dark:from-blue-900/40 dark:to-purple-900/40 opacity-70 blur-3xl rounded-full"></div>
             
-            <div className="relative bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl border border-white/40 dark:border-gray-700/40 rounded-[2rem] p-8 shadow-lg">
+            <div className="relative bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl border border-white/40 dark:border-gray-700/40 rounded-[2rem] p-5 sm:p-8 shadow-lg">
                 <form ref={form} onSubmit={sendEmail}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
@@ -192,46 +192,46 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-md border border-white/40 dark:border-gray-700/40 p-8 rounded-[2rem] shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Contact Information</h3>
+            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-md border border-white/40 dark:border-gray-700/40 p-5 sm:p-8 rounded-[2rem] shadow-xl">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-xl mr-5 border border-blue-200 dark:border-blue-800">
-                    <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-2.5 sm:p-3 rounded-xl mr-4 sm:mr-5 border border-blue-200 dark:border-blue-800 shrink-0">
+                    <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white">Our Location</h4>
-                    <p className="text-gray-600 dark:text-gray-300">28/1 10th A Cross 16th Main B.T.M Second Stage Bangalore</p>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-gray-900 dark:text-white text-sm sm:text-base">Our Location</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base break-words">28/1 10th A Cross 16th Main B.T.M Second Stage Bangalore</p>
                   </div>
                 </div>
                 
                 <a href="tel:+15551234567" className="flex items-start group">
-                  <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-xl mr-5 border border-blue-200 dark:border-blue-800 group-hover:bg-blue-600 transition-colors duration-300">
-                    <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400 group-hover:text-white transition-colors" />
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-2.5 sm:p-3 rounded-xl mr-4 sm:mr-5 border border-blue-200 dark:border-blue-800 group-hover:bg-blue-600 transition-colors duration-300 shrink-0">
+                    <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 dark:text-blue-400 group-hover:text-white transition-colors" />
                   </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Phone Number</h4>
-                    <p className="text-gray-600 dark:text-gray-300">+91 7676074209</p>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-sm sm:text-base">Phone Number</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base break-words">+91 7676074209</p>
                   </div>
                 </a>
 
                 <a href="mailto:hello@booleantechnologies.com" className="flex items-start group">
-                  <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-xl mr-5 border border-blue-200 dark:border-blue-800 group-hover:bg-blue-600 transition-colors duration-300">
-                    <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400 group-hover:text-white transition-colors" />
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-2.5 sm:p-3 rounded-xl mr-4 sm:mr-5 border border-blue-200 dark:border-blue-800 group-hover:bg-blue-600 transition-colors duration-300 shrink-0">
+                    <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 dark:text-blue-400 group-hover:text-white transition-colors" />
                   </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Email Address</h4>
-                    <p className="text-gray-600 dark:text-gray-300">hello@booleantechnologies.com</p>
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-sm sm:text-base">Email Address</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base break-all sm:break-normal">hello@booleantechnologies.com</p>
                   </div>
                 </a>
 
                 <a href="https://wa.me/917676074209" target="_blank" rel="noopener noreferrer" className="flex items-start group">
-                  <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-xl mr-5 border border-green-200 dark:border-green-800 group-hover:bg-green-600 transition-colors duration-300">
-                    <MessageCircle className="h-6 w-6 text-green-600 dark:text-green-400 group-hover:text-white transition-colors" />
+                  <div className="bg-green-100 dark:bg-green-900/30 p-2.5 sm:p-3 rounded-xl mr-4 sm:mr-5 border border-green-200 dark:border-green-800 group-hover:bg-green-600 transition-colors duration-300 shrink-0">
+                    <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 dark:text-green-400 group-hover:text-white transition-colors" />
                   </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">WhatsApp</h4>
-                    <p className="text-gray-600 dark:text-gray-300">Chat with us</p>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors text-sm sm:text-base">WhatsApp</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base break-words">Chat with us</p>
                   </div>
                 </a>
               </div>
