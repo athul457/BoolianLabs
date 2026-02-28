@@ -79,14 +79,14 @@ const ServiceRow = ({ service, index }) => {
           <h3 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 lg:mb-4 leading-tight font-outfit">
             {service.title}
           </h3>
-          <p className="text-sm md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-sm md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-3 lg:line-clamp-none">
             {service.description}
           </p>
         </div>
 
-        {/* Deliverables List (Shows all) */}
+        {/* Deliverables List (Desktop only) */}
         {service.subServices && (
-          <div className="mt-auto pt-5 lg:pt-6 border-t border-gray-100 dark:border-gray-700/50">
+          <div className="hidden lg:block mt-auto pt-5 lg:pt-6 border-t border-gray-100 dark:border-gray-700/50">
             <h4 className="text-[11px] lg:text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider">Key Deliverables</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
               {service.subServices.map((sub, i) => (
@@ -103,6 +103,12 @@ const ServiceRow = ({ service, index }) => {
         <div className="hidden lg:flex mt-6 items-center font-semibold text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
           <span className="mr-2">Explore Service</span>
           <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
+        </div>
+
+        {/* Explore Button (Mobile only) */}
+        <div className="lg:hidden mt-auto pt-4 border-t border-gray-100 dark:border-gray-700/50 flex items-center justify-between text-blue-600 dark:text-blue-400 font-semibold text-[13px]">
+          <span>View full service data</span>
+          <ArrowRight className="w-4 h-4" />
         </div>
       </div>
     </motion.div>
