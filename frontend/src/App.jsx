@@ -7,6 +7,7 @@ import PortfolioPage from './pages/PortfolioPage';
 import PricingPage from './pages/PricingPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import ServiceDetailsPage from './pages/ServiceDetailsPage';
 import WhatsAppChatButton from './components/WhatsAppChatButton';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/:id" element={<ServiceDetailsPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/about" element={<AboutPage />} />

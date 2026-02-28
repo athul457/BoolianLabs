@@ -1,7 +1,34 @@
 import { Zap, HandCoins, Component, BarChart3, Headset, ArrowRight, ShieldCheck } from 'lucide-react';
-import Particles from './Particles';
 import { motion, useInView } from 'framer-motion';
 import { useState, useRef } from 'react';
+
+const colorMap = {
+  blue: {
+    border: "from-blue-500/50 via-blue-400/50 to-blue-500/50 group-hover:from-blue-500 group-hover:via-blue-400 group-hover:to-blue-500",
+    shadow: "shadow-blue-500/10",
+    textHover: "group-hover:text-blue-600 dark:group-hover:text-blue-400"
+  },
+  green: {
+    border: "from-emerald-500/50 via-emerald-400/50 to-emerald-500/50 group-hover:from-emerald-500 group-hover:via-emerald-400 group-hover:to-emerald-500",
+    shadow: "shadow-emerald-500/10",
+    textHover: "group-hover:text-emerald-600 dark:group-hover:text-emerald-400"
+  },
+  purple: {
+    border: "from-purple-500/50 via-purple-400/50 to-purple-500/50 group-hover:from-purple-500 group-hover:via-purple-400 group-hover:to-purple-500",
+    shadow: "shadow-purple-500/10",
+    textHover: "group-hover:text-purple-600 dark:group-hover:text-purple-400"
+  },
+  indigo: {
+    border: "from-indigo-500/50 via-indigo-400/50 to-indigo-500/50 group-hover:from-indigo-500 group-hover:via-indigo-400 group-hover:to-indigo-500",
+    shadow: "shadow-indigo-500/10",
+    textHover: "group-hover:text-indigo-600 dark:group-hover:text-indigo-400"
+  },
+  pink: {
+    border: "from-rose-500/50 via-rose-400/50 to-rose-500/50 group-hover:from-rose-500 group-hover:via-rose-400 group-hover:to-rose-500",
+    shadow: "shadow-rose-500/10",
+    textHover: "group-hover:text-rose-600 dark:group-hover:text-rose-400"
+  }
+};
 
 const WhyChooseUs = () => {
     const sectionRef = useRef(null);
@@ -169,12 +196,12 @@ const WhyChooseUs = () => {
                 <div className="relative z-10">
                     <div className="mb-6 relative">
                         {/* Gradient Border Container */}
-                        <div className="relative w-16 h-16 p-[1px] rounded-2xl bg-gradient-to-br from-blue-500/50 via-purple-500/50 to-blue-500/50 group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-blue-500 transition-all duration-500 shadow-lg shadow-blue-500/10">
+                        <div className={`relative w-16 h-16 p-[1px] rounded-2xl bg-gradient-to-br transition-all duration-500 shadow-lg ${colorMap[reason.color].border} ${colorMap[reason.color].shadow}`}>
                         {/* Inner Glass Container */}
                         <div className="h-full w-full bg-white dark:bg-gray-900 rounded-[15px] flex items-center justify-center relative overflow-hidden group-hover:bg-opacity-90 transition-all duration-500">
                              {/* Subtle Shine Effect */}
                              <div className="absolute -inset-full top-0 block h-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 dark:opacity-10 group-hover:animate-shine" />
-                            <Icon className="w-8 h-8 text-gray-700 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transform group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ease-out" strokeWidth={1.5} />
+                            <Icon className={`w-8 h-8 text-gray-700 dark:text-gray-200 transform group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ease-out ${colorMap[reason.color].textHover}`} strokeWidth={1.5} />
                         </div>
                         </div>
                     </div>

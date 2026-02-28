@@ -200,21 +200,29 @@ const Problem = () => {
       icon: SearchX,
       title: "Invisible Online?",
       description: "No website means you don't exist to 90% of customers.",
+      color: "text-rose-500 dark:text-rose-400",
+      bg: "from-rose-50 to-rose-100 dark:from-rose-900/30 dark:to-rose-800/30"
     },
     {
       icon: History,
       title: "Outdated Design?",
       description: "A 2010-era site destroys trust before they even read a word.",
+      color: "text-amber-500 dark:text-amber-400",
+      bg: "from-amber-50 to-amber-100 dark:from-amber-900/30 dark:to-amber-800/30"
     },
     {
       icon: Smartphone,
       title: "Mobile Broken?",
       description: "If it doesn't work on a phone, you're losing half your traffic.",
+      color: "text-indigo-500 dark:text-indigo-400",
+      bg: "from-indigo-50 to-indigo-100 dark:from-indigo-900/30 dark:to-indigo-800/30"
     },
     {
       icon: TrendingDown,
       title: "Not Receiving Enough Inquiries?",
       description: "Clear structure and messaging make a difference.",
+      color: "text-emerald-500 dark:text-emerald-400",
+      bg: "from-emerald-50 to-emerald-100 dark:from-emerald-900/30 dark:to-emerald-800/30"
     }
   ];
 
@@ -294,8 +302,8 @@ const ProblemCard = ({ item, index }) => {
     >
       <div className="flex flex-col items-center text-center">
         
-        <div className="p-4 bg-gradient-to-br from-blue-50 to-green-50 dark:from-gray-700 dark:to-gray-700 rounded-xl mb-5">
-          <Icon className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+        <div className={`p-4 bg-gradient-to-br ${item.bg || 'from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30'} rounded-xl mb-5`}>
+          <Icon className={`h-8 w-8 ${item.color || 'text-blue-600 dark:text-blue-400'}`} />
         </div>
 
         <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3">

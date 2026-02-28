@@ -130,146 +130,165 @@ import aidevAnimation from "../assets/lottie/aidev.json";
 export const services = [
   {
     animation: webAnimation,
+    slug: "website-development",
     title: "Website Development",
     description: "Modern websites that build trust and help your business grow online.",
     subServices: [
       {
-        title: "Custom Websites",
-        description: "Fast, responsive, and SEO-friendly websites built for your business."
+        title: "Custom Web Development",
+        description: "Boolean Technologies specializes in building high-performance, custom websites tailored to your unique business needs. We craft platforms from the ground up to ensure lightning-fast loading speeds, robust security, and seamless scalability to handle future growth. Our custom web solutions are designed precisely to elevate your digital presence."
       },
       {
         title: "UI/UX Design",
-        description: "Clean and user-friendly designs that improve engagement."
+        description: "Our dedicated design team focuses on user-centric aesthetics to create engaging, intuitive experiences. We prioritize clarity, usability, and modern visual trends to ensure your visitors easily navigate your services and convert into loyal customers. It's not just about looks; it's about seamless interaction."
       },
       {
-        title: "Portfolio & Business Sites",
-        description: "Professional websites to showcase your brand and services."
+        title: "E-Commerce Solutions",
+        description: "Transform your retail business into a digital powerhouse. We develop fully featured e-commerce platforms complete with secure payment gateways, inventory management, and intuitive shopping carts. Our solutions are designed to maximize your conversions and provide absolute ease of use for both admins and shoppers."
+      },
+      {
+        title: "Portfolio & Corporate Sites",
+        description: "Make a powerful first impression with professional corporate websites and stunning portfolios. We design sites that elegantly showcase your brand narrative, achievements, and core services—establishing immediate credibility and trust with your target audience and stakeholders."
       }
     ]
   },
   {
     animation: marketingAnimation,
+    slug: "digital-marketing",
     title: "Digital Marketing",
     description: "Smart marketing strategies to increase visibility and reach more customers.",
     subServices: [
       {
-        title: "Social Media Marketing",
-        description: "Creative content and campaigns to grow your audience."
+        title: "Search Engine Optimization (SEO)",
+        description: "As a leading digital marketing agency, Boolean Technologies develops highly optimized, custom SEO strategies guaranteed to maximize your organic growth. Our experts perform meticulous keyword research, technical audits, and content optimization to secure top-ranking positions and drive high-intent traffic directly to your website."
       },
       {
-        title: "AI Marketing",
-        description: "Data-driven campaigns for better targeting and performance."
+        title: "Social Media Marketing (SMM)",
+        description: "We create highly engaging and result-oriented social media campaigns designed to captivate audiences worldwide. By crafting strategic content tailored to each platform, we build meaningful customer connections, boost brand loyalty, and drive high conversion rates across all your social channels."
+      },
+      {
+        title: "Google Ads & PPC",
+        description: "Maximize your absolute return on investment with targeted Pay-Per-Click campaigns. Our dedicated team develops highly focused, data-driven advertising strategies using Google Ads. We precisely target your ideal demographic to generate high-quality leads and instant visibility in a competitive marketplace."
+      },
+      {
+        title: "Content Marketing",
+        description: "Content is the backbone of modern digital success. Our creative team produces compelling, value-driven content—from high-quality blog posts to engaging video scripts—that educates your audience, builds brand authority, and naturally guides users through the sales funnel."
       }
     ]
   },
   {
     animation: mobileAnimation,
+    slug: "mobile-app-development",
     title: "Mobile App Development",
     description: "User-friendly Android and iOS apps built for performance and growth.",
     subServices: [
       {
+        title: "Native iOS Development",
+        description: "We build premium, high-performance applications exclusively for the Apple ecosystem. Using Swift and modern iOS frameworks, our team ensures your application integrates flawlessly with the latest Apple hardware, providing users with a fluid, secure, and intuitive experience."
+      },
+      {
+        title: "Native Android Development",
+        description: "Reach the massive global audience of Android users with robust, scalable native applications. We utilize Kotlin and Android Studio to develop highly responsive apps designed to run beautifully across the deeply fragmented landscape of Android devices and screen sizes."
+      },
+      {
         title: "Cross-Platform Apps",
-        description: "Apps that work smoothly on both Android and iOS."
+        description: "Reduce time-to-market without sacrificing quality. Using cutting-edge frameworks like React Native and Flutter, we develop versatile applications that work seamlessly on both Android and iOS from a single codebase—ensuring consistent UI/UX and significantly lower maintenance costs."
       },
       {
-        title: "App Design",
-        description: "Simple and engaging mobile user interfaces."
-      },
-      {
-        title: "Backend Integration",
-        description: "Secure connection with databases and APIs."
-      },
-      {
-        title: "App Support",
-        description: "Ongoing updates and performance improvements."
+        title: "App Maintenance & Scaling",
+        description: "Our relationship doesn't end at launch. We provide comprehensive post-launch support, continuous performance monitoring, and rapid updates. As your user base grows, we ensure your backend infrastructure seamlessly scales to accommodate the increased demand without a hitch."
       }
     ]
   },
   {
     animation: erpAnimation,
+    slug: "erp-development",
     title: "ERP Development",
     description: "Custom systems to manage and automate your business operations.",
     subServices: [
       {
-        title: "Business Management System",
-        description: "Centralized control of daily operations."
+        title: "Custom ERP Architecture",
+        description: "Off-the-shelf software rarely fits complex business workflows perfectly. Boolean Technologies engineers bespoke Enterprise Resource Planning systems from the ground up, centralizing your daily operations into a single, intuitive dashboard fully tailored to your unique operational logic."
       },
       {
-        title: "Inventory Tracking",
-        description: "Automated stock and resource management."
+        title: "Supply Chain & Inventory Management",
+        description: "Gain absolute transparency over your logistics. We build intelligent tracking systems that automate stock levels, predict supply shortages, and streamline your entire supply chain. Say goodbye to manual counting and human errors with real-time inventory insights."
       },
       {
-        title: "Finance & HR Tools",
-        description: "Payroll, accounting, and employee management."
+        title: "HR & Payroll Integration",
+        description: "Empower your human resources team with automated, compliance-driven tools. Our custom modules streamline employee onboarding, time tracking, performance reviews, and complex payroll calculations, allowing your HR department to focus on culture rather than paperwork."
       },
       {
-        title: "Reports & Insights",
-        description: "Clear dashboards for better decision making."
+        title: "Advanced Analytics & Reporting",
+        description: "Data is only valuable if it is readable. Our ERP solutions feature highly visual, real-time dashboards equipped with custom metrics and predictive analytics. Make informed, strategic business decisions supported by crystal-clear data visualizations."
       }
     ]
   },
   {
     animation: aiAnimation,
+    slug: "ai-automation",
     title: "AI Automation",
     description: "Automate repetitive tasks and improve efficiency with AI solutions.",
     subServices: [
       {
-        title: "Workflow Automation",
-        description: "Automate daily tasks and reduce manual work."
+        title: "Intelligent Workflow Automation",
+        description: "Free your team from hours of repetitive, manual tasks. We integrate sophisticated AI agents directly into your business pipelines to handle data entry, document processing, and email routing. This dramatically reduces margin of error while skyrocketing your team's overall productivity."
       },
       {
-        title: "AI Chatbots",
-        description: "24/7 automated customer support systems."
+        title: "AI-Powered Customer Support",
+        description: "Deliver exceptional customer service 24/7 without expanding your human headcount. Our advanced NLP chatbots understand context and sentiment, capable of resolving complex customer queries, processing refunds, and routing highly specific issues to the correct human agents."
       },
       {
-        title: "Smart Analytics",
-        description: "Use data to make better business decisions."
+        title: "Predictive Business Analytics",
+        description: "Stop reacting to the market and start predicting it. We build AI models that analyze your historical business data to forecast future trends, detect seasonal anomalies, and provide actionable recommendations on pricing and product demand before shifts even happen."
       },
       {
-        title: "System Integration",
-        description: "Connect AI tools with your existing systems."
+        title: "Smart System Integration",
+        description: "You don't need to rebuild your tech stack to benefit from AI. We seamlessly connect modern artificial intelligence capabilities into your existing legacy software, CRMs, or ERPs through customized API gateways, instantly modernizing your company's infrastructure."
       }
     ]
   },
   {
     animation: blenderAnimation,
+    slug: "3d-modeling-blender",
     title: "3D Modeling & Blender",
     description: "Professional 3D visuals for products, marketing, and presentations.",
     subServices: [
       {
-        title: "Product Rendering",
-        description: "Realistic 3D product visuals."
+        title: "Photorealistic Product Rendering",
+        description: "Elevate your marketing materials with breathtaking, photorealistic 3D product visualizations. Long before the physical manufacturing process is even finished, we can provide you with studio-quality renders of your products from every angle to use in catalogs, websites, and advertisements."
       },
       {
-        title: "Architecture Modeling",
-        description: "3D building and property visualizations."
+        title: "Architectural Visualization",
+        description: "Bring blueprints to life with highly detailed 3D property models. We craft immersive interior and exterior visualizations for real estate developers and architects. Show your clients exactly what a space will look like with hyper-realistic lighting, textures, and environments."
       },
       {
-        title: "3D Animation",
-        description: "Engaging motion visuals for branding."
+        title: "3D Animation & Motion Graphics",
+        description: "Capture attention in a crowded digital landscape with dynamic 3D motion graphics. From complex mechanical breakdowns demonstrating how a product works internally to eye-catching social media loops, our Blender experts create animations that deeply engage your audience."
       },
       {
-        title: "Web & AR Assets",
-        description: "Optimized 3D assets for digital platforms."
+        title: "AR & WebGL Assets",
+        description: "Step into the future of e-commerce. We design highly optimized 3D models specifically tailored for the web and Augmented Reality. Allow your customers to spin, interact with, and project your products into their own physical space right from their mobile browser."
       }
     ]
   },
   {
     animation: aidevAnimation,
+    slug: "ai-development",
     title: "AI Development",
     description: "Advanced artificial intelligence solutions to empower your business.",
     subServices: [
       {
-        title: "Prediction Models",
-        description: "Data-driven forecasting and predictive analytics systems."
+        title: "Generative AI Solutions",
+        description: "Harness the power of Large Language Models to automate content creation. From custom text generation fine-tuned on your company's unique voice to automated image creation for marketing, we build bespoke generative tools that act as an undeniable force multiplier for your creative teams."
       },
       {
-        title: "Detection Systems",
-        description: "Object, anomaly, and pattern recognition technologies."
+        title: "Computer Vision & Object Detection",
+        description: "Grant your software the ability to see and understand the world. We train sophisticated neural networks capable of real-time object detection, quality control inspection, facial recognition, and complex image analysis—ideal for manufacturing, security, and healthcare applications."
       },
       {
-        title: "Generative AI",
-        description: "Custom models for automated content creation and processing."
+        title: "Custom Machine Learning Models",
+        description: "We don't just use APIs; we build them. Our data scientists design, train, and deploy proprietary machine learning models tailored exclusively to your highly specific datasets. Whether it's fraud detection algorithms or personalized recommendation engines, we build algorithms that give you a competitive edge."
       }
     ]
   }
