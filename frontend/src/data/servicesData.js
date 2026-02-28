@@ -135,21 +135,45 @@ export const services = [
     description: "Modern websites that build trust and help your business grow online.",
     subServices: [
       {
-        title: "Custom Web Development",
-        description: "Boolean Technologies specializes in building high-performance, custom websites tailored to your unique business needs. We craft platforms from the ground up to ensure lightning-fast loading speeds, robust security, and seamless scalability to handle future growth. Our custom web solutions are designed precisely to elevate your digital presence."
-      },
-      {
-        title: "UI/UX Design",
-        description: "Our dedicated design team focuses on user-centric aesthetics to create engaging, intuitive experiences. We prioritize clarity, usability, and modern visual trends to ensure your visitors easily navigate your services and convert into loyal customers. It's not just about looks; it's about seamless interaction."
-      },
-      {
-        title: "E-Commerce Solutions",
-        description: "Transform your retail business into a digital powerhouse. We develop fully featured e-commerce platforms complete with secure payment gateways, inventory management, and intuitive shopping carts. Our solutions are designed to maximize your conversions and provide absolute ease of use for both admins and shoppers."
-      },
-      {
-        title: "Portfolio & Corporate Sites",
-        description: "Make a powerful first impression with professional corporate websites and stunning portfolios. We design sites that elegantly showcase your brand narrative, achievements, and core services—establishing immediate credibility and trust with your target audience and stakeholders."
-      }
+  title: "Custom Web Development",
+  description: "We build secure, scalable full-stack web applications using modern technologies. From responsive frontends to robust backend APIs and database architecture, our solutions are engineered for performance, security, and long-term growth."
+},
+{
+  title: "UI/UX Design",
+  description: "We design clean, conversion-focused interfaces that prioritize usability and clarity. Every layout is structured to enhance user flow, reduce friction, and create seamless digital experiences across all devices."
+},
+{
+  title: "E-Commerce Solutions",
+  description: "We develop scalable e-commerce platforms with secure authentication, payment gateway integration, inventory management, and performance optimization—ensuring a smooth buying experience and reliable backend control."
+},
+{
+  title: "Portfolio & Corporate Websites",
+  description: "We create high-performance corporate and portfolio websites that establish credibility, communicate brand value clearly, and drive engagement through modern design and optimized structure."
+},
+{
+  title: "Full-Stack Web Applications",
+  description: "From idea to deployment, we build dynamic web applications with secure authentication, role-based access control, API integrations, and database optimization tailored to your business workflows."
+},
+{
+  title: "Authentication & Security Implementation",
+  description: "We implement secure login systems, JWT-based authentication, role-based authorization, and protected routes to safeguard your application and user data."
+},
+{
+  title: "API Development & Integration",
+  description: "We design and integrate RESTful APIs that enable seamless communication between systems, third-party services, and frontend applications."
+},
+{
+  title: "Database Architecture & Optimization",
+  description: "We structure and optimize databases for performance, scalability, and reliability, ensuring efficient data handling as your business grows."
+},
+{
+  title: "Deployment & Cloud Setup",
+  description: "We handle application deployment, hosting configuration, environment setup, and performance optimization to ensure your web solution runs smoothly in production."
+},
+{
+  title: "Performance Optimization",
+  description: "We analyze and optimize application speed, reduce load times, compress assets, and improve overall performance to deliver fast and efficient user experiences."
+}
     ]
   },
   {
@@ -158,22 +182,34 @@ export const services = [
     title: "Digital Marketing",
     description: "Smart marketing strategies to increase visibility and reach more customers.",
     subServices: [
-      {
-        title: "Search Engine Optimization (SEO)",
-        description: "As a leading digital marketing agency, Boolean Technologies develops highly optimized, custom SEO strategies guaranteed to maximize your organic growth. Our experts perform meticulous keyword research, technical audits, and content optimization to secure top-ranking positions and drive high-intent traffic directly to your website."
-      },
-      {
-        title: "Social Media Marketing (SMM)",
-        description: "We create highly engaging and result-oriented social media campaigns designed to captivate audiences worldwide. By crafting strategic content tailored to each platform, we build meaningful customer connections, boost brand loyalty, and drive high conversion rates across all your social channels."
-      },
-      {
-        title: "Google Ads & PPC",
-        description: "Maximize your absolute return on investment with targeted Pay-Per-Click campaigns. Our dedicated team develops highly focused, data-driven advertising strategies using Google Ads. We precisely target your ideal demographic to generate high-quality leads and instant visibility in a competitive marketplace."
-      },
-      {
-        title: "Content Marketing",
-        description: "Content is the backbone of modern digital success. Our creative team produces compelling, value-driven content—from high-quality blog posts to engaging video scripts—that educates your audience, builds brand authority, and naturally guides users through the sales funnel."
-      }
+{
+  title: "Search Engine Optimization (SEO)",
+  description: "Boolean Technologies develops data-driven, custom SEO strategies designed to accelerate sustainable organic growth. From in-depth keyword research and technical audits to on-page optimization and high-quality link building, we position your brand to rank higher, attract qualified traffic, and dominate search results."
+},
+{
+  title: "Social Media Marketing (SMM)",
+  description: "We create strategic, engagement-focused social media campaigns tailored to your brand voice and audience behavior. Through compelling content, community management, and performance tracking, we strengthen brand loyalty and drive measurable conversions across all major platforms."
+},
+{
+  title: "Performance Marketing & Paid Advertising",
+  description: "Maximize ROI with precision-targeted paid campaigns across Google, Meta, LinkedIn, and YouTube. Our data-driven advertising strategies focus on audience targeting, conversion tracking, A/B testing, and continuous optimization to generate high-quality leads and scalable revenue growth."
+},
+{
+  title: "Content Marketing & Brand Storytelling",
+  description: "We craft value-driven content strategies that educate, engage, and convert. From SEO blogs and website copy to video scripts and campaign messaging, our content builds authority, nurtures trust, and moves your audience seamlessly through the sales funnel."
+},
+{
+  title: "Conversion Rate Optimization (CRO)",
+  description: "Driving traffic is only half the equation. We analyze user behavior, optimize landing pages, refine funnels, and conduct A/B testing to increase conversions and maximize the performance of every marketing campaign."
+},
+{
+  title: "Email Marketing & Automation",
+  description: "Through strategic email campaigns and intelligent automation workflows, we nurture leads, re-engage prospects, and increase customer lifetime value. Our personalized communication strategies turn prospects into loyal brand advocates."
+},
+{
+  title: "Analytics & Performance Tracking",
+  description: "We implement advanced analytics and conversion tracking systems to measure every interaction. With transparent reporting and actionable insights, we continuously refine strategies to ensure consistent growth and measurable success."
+}
     ]
   },
   {
@@ -183,21 +219,21 @@ export const services = [
     description: "User-friendly Android and iOS apps built for performance and growth.",
     subServices: [
       {
-        title: "Native iOS Development",
-        description: "We build premium, high-performance applications exclusively for the Apple ecosystem. Using Swift and modern iOS frameworks, our team ensures your application integrates flawlessly with the latest Apple hardware, providing users with a fluid, secure, and intuitive experience."
-      },
-      {
-        title: "Native Android Development",
-        description: "Reach the massive global audience of Android users with robust, scalable native applications. We utilize Kotlin and Android Studio to develop highly responsive apps designed to run beautifully across the deeply fragmented landscape of Android devices and screen sizes."
-      },
-      {
-        title: "Cross-Platform Apps",
-        description: "Reduce time-to-market without sacrificing quality. Using cutting-edge frameworks like React Native and Flutter, we develop versatile applications that work seamlessly on both Android and iOS from a single codebase—ensuring consistent UI/UX and significantly lower maintenance costs."
-      },
-      {
-        title: "App Maintenance & Scaling",
-        description: "Our relationship doesn't end at launch. We provide comprehensive post-launch support, continuous performance monitoring, and rapid updates. As your user base grows, we ensure your backend infrastructure seamlessly scales to accommodate the increased demand without a hitch."
-      }
+  title: "Cross-Platform App Development",
+  description: "We develop scalable mobile applications using modern cross-platform technologies, enabling seamless performance across both Android and iOS. By leveraging efficient code architecture and reusable components, we accelerate development while maintaining high performance and consistent user experience."
+},
+{
+  title: "Backend-Powered Mobile Applications",
+  description: "Our mobile solutions are supported by secure, scalable backend systems. From authentication and role-based access control to API integrations and database management, we ensure your application operates reliably under real-world usage."
+},
+{
+  title: "API & Third-Party Integration",
+  description: "We integrate payment gateways, cloud services, analytics tools, and external APIs to extend your app’s capabilities and streamline user workflows."
+},
+{
+  title: "App Maintenance & Performance Optimization",
+  description: "Post-launch, we provide ongoing support, performance monitoring, bug fixes, and feature enhancements. As your user base grows, we optimize infrastructure and improve scalability to maintain smooth and reliable performance."
+}
     ]
   },
   {
