@@ -139,25 +139,39 @@ const WhyChooseUs = () => {
             className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {reasons.map((reason, index) => (
-              <div key={index} className="min-w-full snap-center px-1">
+            {reasons.map((reason, index) => {
+              const Icon = reason.icon;
+              return (
+              <div key={index} className="w-[85vw] sm:w-[60vw] snap-center px-2 flex-shrink-0">
                  <motion.div
-                  className={`relative h-full bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl p-6 rounded-2xl border border-white/20 dark:border-gray-700/50 shadow-lg flex flex-col justify-between transform-gpu will-change-transform`}
-                  initial={{ opacity: 0, scale: 0.9 }}
+                  className={`relative group h-full bg-white dark:bg-gray-800/60 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-gray-100 dark:border-gray-700/50 shadow-lg flex flex-col justify-between transform-gpu will-change-transform`}
+                  initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                 >
+                  {/* Decorative background gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50/50 dark:from-blue-900/10 dark:to-purple-900/10 opacity-100 rounded-[2rem] pointer-events-none"></div>
+
                   <div className="relative z-10">
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      <div className="mb-6 relative">
+                          {/* Gradient Border Container */}
+                          <div className={`relative w-14 h-14 p-[1px] rounded-2xl bg-gradient-to-br transition-all duration-500 shadow-lg ${colorMap[reason.color].border} ${colorMap[reason.color].shadow}`}>
+                            {/* Inner Glass Container */}
+                            <div className="h-full w-full bg-white dark:bg-gray-900 rounded-[15px] flex items-center justify-center relative overflow-hidden">
+                                <Icon className={`w-7 h-7 text-gray-700 dark:text-gray-200`} strokeWidth={1.5} />
+                            </div>
+                          </div>
+                      </div>
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">
                           {reason.title}
                       </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                      <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
                           {reason.description}
                       </p>
                   </div>
                 </motion.div>
               </div>
-            ))}
+            )})}
           </div>
 
           {/* Dots Indicator */}
