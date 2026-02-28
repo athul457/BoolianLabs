@@ -142,7 +142,7 @@ const WhyChooseUs = () => {
             {reasons.map((reason, index) => {
               const Icon = reason.icon;
               return (
-              <div key={index} className="w-[80vw] sm:w-[60vw] snap-center px-4 flex-shrink-0">
+              <div key={index} className="w-full min-w-full snap-center px-4 flex-shrink-0">
                  <motion.div
                   className={`relative group h-full bg-white dark:bg-gray-800/60 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-gray-100 dark:border-gray-700/50 shadow-lg flex flex-col justify-between transform-gpu will-change-transform`}
                   initial={{ opacity: 0, scale: 0.95 }}
