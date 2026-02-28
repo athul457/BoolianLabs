@@ -142,7 +142,7 @@ const WhyChooseUs = () => {
             {reasons.map((reason, index) => {
               const Icon = reason.icon;
               return (
-              <div key={index} className="w-[85vw] sm:w-[60vw] snap-center px-2 flex-shrink-0">
+              <div key={index} className="w-[80vw] sm:w-[60vw] snap-center px-4 flex-shrink-0">
                  <motion.div
                   className={`relative group h-full bg-white dark:bg-gray-800/60 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-gray-100 dark:border-gray-700/50 shadow-lg flex flex-col justify-between transform-gpu will-change-transform`}
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -152,8 +152,8 @@ const WhyChooseUs = () => {
                   {/* Decorative background gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50/50 dark:from-blue-900/10 dark:to-purple-900/10 opacity-100 rounded-[2rem] pointer-events-none"></div>
 
-                  <div className="relative z-10">
-                      <div className="mb-6 relative">
+                  <div className="relative z-10 flex flex-col items-center text-center w-full">
+                      <div className="mb-6 relative flex justify-center w-full">
                           {/* Gradient Border Container */}
                           <div className={`relative w-14 h-14 p-[1px] rounded-2xl bg-gradient-to-br transition-all duration-500 shadow-lg ${colorMap[reason.color].border} ${colorMap[reason.color].shadow}`}>
                             {/* Inner Glass Container */}
@@ -162,10 +162,10 @@ const WhyChooseUs = () => {
                             </div>
                           </div>
                       </div>
-                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 w-full">
                           {reason.title}
                       </h3>
-                      <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                      <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-medium w-full">
                           {reason.description}
                       </p>
                   </div>
