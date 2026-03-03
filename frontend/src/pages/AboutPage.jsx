@@ -5,6 +5,7 @@ import Particles from '../components/Particles';
 import { motion } from 'framer-motion';
 import { Award, Users, Globe, TrendingUp } from 'lucide-react';
 import SEO from '../components/SEO';
+import MeetOurTeam from '../components/MeetOurTeam';
 
 const AboutPage = () => {
   const values = [
@@ -139,7 +140,7 @@ const AboutPage = () => {
                      className="space-y-6 text-lg text-gray-600 dark:text-gray-300/90 font-light lg:pt-12"
                 >
                     <p className="leading-relaxed">
-                        Boolean Technologies is a forward-thinking digital agency delivering innovative web design and development solutions to businesses worldwide. Rooted in Kerala and operating globally, we craft strategic, scalable digital experiences that help brands grow, compete, and lead in the modern marketplace.
+                        Boolean Technologies is a forward-thinking digital agency delivering innovative web design and development solutions to businesses worldwide. Rooted in India and operating globally, we craft strategic, scalable digital experiences that help brands grow, compete, and lead in the modern marketplace.
                     </p>
                   
                     <p className="leading-relaxed">
@@ -219,6 +220,7 @@ const AboutPage = () => {
        </section>
 
       <WhyChooseUs />
+      <MeetOurTeam />
       <Testimonials />
       <CTA />
     </div>

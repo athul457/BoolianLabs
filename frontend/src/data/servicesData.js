@@ -1,6 +1,3 @@
-
-
-
 import webAnimation from "../assets/lottie/web.json";
 import marketingAnimation from "../assets/lottie/marketing.json";
 import mobileAnimation from "../assets/lottie/mobile.json";
