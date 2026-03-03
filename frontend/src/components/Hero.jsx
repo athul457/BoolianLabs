@@ -58,7 +58,10 @@ const TypingText = ({ text, className }) => {
 
 const Hero = () => {
   return (
-    <section className="relative bg-white dark:bg-gray-900 text-gray-900 dark:text-white pt-48 pb-16 lg:py-32 overflow-hidden transition-colors duration-300">
+    <section 
+      className="relative bg-white dark:bg-gray-900 text-gray-900 dark:text-white pt-48 pb-16 lg:py-32 overflow-hidden transition-colors duration-300 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')` }}
+    >
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <Particles
@@ -151,112 +154,37 @@ const Hero = () => {
           </motion.div>
 
 
-          {/* Right Column: Glassmorphism Stats */}
+          {/* Right Column: 3D Lottie Animation */}
           <motion.div 
-            className="hidden lg:block flex-1 w-full max-w-lg lg:max-w-none perspective-1000"
+            className="hidden lg:flex flex-1 w-full justify-center items-center perspective-1000"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <div className="relative transform rotate-y-12 transition-transform duration-500 hover:rotate-y-0">
-              
-              <div className="relative bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl border border-white/40 dark:border-gray-700/40 rounded-[1.5rem] md:rounded-[2rem] p-4 md:p-8 shadow-2xl">
-                <div className="flex items-center justify-between mb-4 md:mb-8">
-                    <div>
-                        <h3 className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white">Growth-Focused Solutions</h3>
-                        <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400">All-in-One Solution</p>
-                    </div>
-                    <div className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 md:px-3 py-1 rounded-full text-[10px] md:text-sm font-semibold flex items-center">
-                        <Award className="h-3 w-3 md:h-4 md:w-4 mr-1" /> Top Quality
-                    </div>
-                </div>
+            <div className="relative w-full max-w-lg lg:max-w-none transform transition-transform duration-700 hover:scale-105">
+               {/* Decorative glow behind 3D object */}
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/30 blur-[100px] rounded-full pointer-events-none"></div>
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-teal-500/20 blur-[80px] rounded-full pointer-events-none"></div>
+               
+               {/* Removed Lottie Animation */}
 
-                <motion.div 
-                  className="space-y-3 md:space-y-6"
-                  initial="hidden"
-                  animate="visible"
-                  variants={{
-                    hidden: { opacity: 0 },
-                    visible: {
-                      opacity: 1,
-                      transition: {
-                        staggerChildren: 0.15,
-                        delayChildren: 0.4
-                      }
-                    }
-                  }}
-                >
-                    <motion.div 
-                      variants={{
-                        hidden: { opacity: 0, x: 20 },
-                        visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
-                      }}
-                      whileHover={{ scale: 1.02 }}
-                      className="bg-white/50 dark:bg-gray-700/50 p-2 md:p-4 rounded-xl flex items-center border border-white/60 dark:border-gray-600/30 shadow-sm transition-colors cursor-pointer hover:bg-white/80 dark:hover:bg-gray-700/80"
-                    >
-                        {/* <div className="bg-blue-100 dark:bg-blue-900/50 p-2 md:p-3 rounded-lg mr-3 md:mr-4">
-                            <Globe className="h-4 w-4 md:h-6 md:w-6 text-blue-600 dark:text-blue-400" />
-                        </div> */}
-                        <div>
-                            <p className="text-[10px] md:text-sm text-gray-500 dark:text-gray-400">Custom Development</p>
-                            <p className="text-sm md:text-xl font-bold text-gray-900 dark:text-white">Tailored to You</p>
-                        </div>
-                    </motion.div>
-
-                    <motion.div 
-                      variants={{
-                        hidden: { opacity: 0, x: 20 },
-                        visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
-                      }}
-                      whileHover={{ scale: 1.02 }}
-                      className="bg-white/50 dark:bg-gray-700/50 p-2 md:p-4 rounded-xl flex items-center border border-white/60 dark:border-gray-600/30 shadow-sm transition-colors cursor-pointer hover:bg-white/80 dark:hover:bg-gray-700/80"
-                    >
-                         {/* <div className="bg-teal-100 dark:bg-teal-900/50 p-2 md:p-3 rounded-lg mr-3 md:mr-4">
-                            <Smartphone className="h-4 w-4 md:h-6 md:w-6 text-teal-600 dark:text-teal-400" />
-                        </div> */}
-                        <div>
-                            <p className="text-[10px] md:text-sm text-gray-500 dark:text-gray-400">Mobile Responsive</p>
-                            <p className="text-sm md:text-xl font-bold text-gray-900 dark:text-white">Perfect on Any Device</p>
-                        </div>
-                    </motion.div>
-
-                    <motion.div 
-                      variants={{
-                        hidden: { opacity: 0, x: 20 },
-                        visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
-                      }}
-                      whileHover={{ scale: 1.02 }}
-                      className="bg-white/50 dark:bg-gray-700/50 p-2 md:p-4 rounded-xl flex items-center border border-white/60 dark:border-gray-600/30 shadow-sm transition-colors cursor-pointer hover:bg-white/80 dark:hover:bg-gray-700/80"
-                    >
-                        {/* <div className="bg-green-100 dark:bg-green-900/50 p-2 md:p-3 rounded-lg mr-3 md:mr-4">
-                            <Search className="h-4 w-4 md:h-6 md:w-6 text-green-600 dark:text-green-400" />
-                        </div> */}
-                        <div>
-                            <p className="text-[10px] md:text-sm text-gray-500 dark:text-gray-400">SEO Optimization</p>
-                            <p className="text-sm md:text-xl font-bold text-gray-900 dark:text-white">Rank Higher</p>
-                        </div>
-                    </motion.div>
-                </motion.div>
-              </div>
-
-               {/* Floating elements */}
-               <motion.a 
-                href="https://wa.me/918304968724"
+               {/* Floating WhatsApp element */}
+               {/* <motion.a 
+                href="https://wa.me/917676074209"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute -top-3 -right-2 md:-top-6 md:-right-6 transition-all duration-300 z-50 cursor-pointer flex flex-col items-center justify-center hover:scale-110 drop-shadow-2xl group"
-                animate={{ y: [0, -10, 0] }}
+                className="absolute top-10 -right-6 md:top-20 md:-right-8 transition-all duration-300 z-50 cursor-pointer flex flex-col items-center justify-center hover:scale-110 drop-shadow-2xl group"
+                animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                >
                  <div className="absolute -top-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs font-bold px-3 py-1.5 rounded-lg pointer-events-none shadow-xl">
                    Chat with us
                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900 dark:bg-white rotate-45"></div>
                  </div>
-                 <div className="rounded-full overflow-hidden flex items-center justify-center">
-                   <WhatsAppIcon className="w-10 h-10 md:w-12 md:h-12" />
+                 <div className="rounded-full overflow-hidden flex items-center justify-center border-2 border-white/20 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
+                   <WhatsAppIcon className="w-12 h-12 md:w-16 md:h-16" />
                  </div>
-               </motion.a>
-
+               </motion.a> */}
             </div>
           </motion.div>
         </div>

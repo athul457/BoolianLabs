@@ -3,7 +3,7 @@ export const teamMembers = [
     name: "Athul Sukumaran",
     role: "Co-founder, CTO",
     linkedin: "https://www.linkedin.com/in/athul457/",
-    image: "/myTeam/athu.png" // Placeholder for user to upload small rounded image later
+    image: "/myTeam/athul.png" // Placeholder for user to upload small rounded image later
   },
   {
     name: "Sayed Muhammed Jiyad",
