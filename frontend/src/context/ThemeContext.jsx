@@ -8,9 +8,8 @@ export const ThemeProvider = ({ children }) => {
     if (localStorage.getItem("theme")) {
       return localStorage.getItem("theme");
     }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+    // If no preference is explicitly set in local storage, default to "dark"
+    return "dark";
   });
 
   useEffect(() => {
