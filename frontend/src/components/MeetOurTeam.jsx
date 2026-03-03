@@ -105,7 +105,7 @@ const MeetOurTeam = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
-                  className="group relative max-w-[380px] sm:max-w-none mx-auto bg-white dark:bg-[#111824] rounded-2xl sm:rounded-[2rem] shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col h-full"
+                  className="group relative max-w-[370px] sm:max-w-none mx-auto bg-white dark:bg-[#111824] rounded-2xl sm:rounded-[2rem] shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col h-full"
                 >
                   {/* Hover Gradient Background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
