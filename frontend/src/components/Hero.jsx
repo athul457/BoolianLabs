@@ -60,8 +60,10 @@ const Hero = () => {
   return (
     <section 
       className="relative bg-white dark:bg-gray-900 text-gray-900 dark:text-white pt-48 pb-16 lg:py-32 overflow-hidden transition-colors duration-300 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')` }}
+      style={{ backgroundImage: `url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')` }}
     >
+      <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-white/80 dark:from-slate-900/95 dark:to-slate-900/85 z-0 pointer-events-none transition-colors duration-300"></div>
+
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <Particles

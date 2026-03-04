@@ -131,6 +131,20 @@ const ServiceDetailsPage = () => {
                         className="overflow-hidden"
                       >
                         <div className="px-6 pb-6 pt-0 ml-14">
+                           {sub.image && (
+                             <div className="mb-6 rounded-xl overflow-hidden relative h-48 sm:h-64 w-full shadow-md border border-gray-100 dark:border-gray-800">
+                               <img src={sub.image} alt={sub.title} className="w-full h-full object-cover" />
+                               {sub.tags && (
+                                 <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
+                                   {sub.tags.map((tag, tIdx) => (
+                                     <span key={tIdx} className="px-3 py-1 bg-black/60 backdrop-blur-md text-white/90 text-[10px] md:text-xs font-medium rounded-full border border-white/20 tracking-wide uppercase">
+                                       {tag}
+                                     </span>
+                                   ))}
+                                 </div>
+                               )}
+                             </div>
+                           )}
                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
                              {sub.description}
                            </p>

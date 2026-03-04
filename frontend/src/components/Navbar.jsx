@@ -54,7 +54,7 @@ const Navbar = () => {
         className={`fixed top-0 w-full z-50 transition-all duration-500 border-b ${
             scrolled || location.pathname !== '/' 
             ? 'bg-white dark:bg-gray-900/95 backdrop-blur-xl border-gray-200 dark:border-gray-800 shadow-sm' 
-            : 'bg-white/5 dark:bg-black/5 backdrop-blur-md border-white/10 py-4'
+            : 'bg-white/10 dark:bg-black/10 backdrop-blur-md border-black/5 dark:border-white/10 py-4'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -194,16 +194,40 @@ export const services = [
     description: "Advanced artificial intelligence solutions to empower your business.",
     subServices: [
       {
-        title: "Generative AI Solutions",
-        description: "Harness the power of Large Language Models to automate content creation. From custom text generation fine-tuned on your company's unique voice to automated image creation for marketing, we build bespoke generative tools that act as an undeniable force multiplier for your creative teams."
+        title: "Healthcare",
+        description: "In healthcare environments, our AI solutions can assist with patient monitoring, provide medication reminders, and offer companionship to patients, enhancing care quality while reducing the workload on medical professionals.",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
+        tags: ["Patient Care", "Precision"]
       },
       {
-        title: "Computer Vision & Object Detection",
-        description: "Grant your software the ability to see and understand the world. We train sophisticated neural networks capable of real-time object detection, quality control inspection, facial recognition, and complex image analysis—ideal for manufacturing, security, and healthcare applications."
+        title: "Education",
+        description: "Transform learning experiences with interactive AI systems that provide personalized education and foster engagement with technology.",
+        image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
+        tags: ["Learning", "Engagement"]
       },
       {
-        title: "Custom Machine Learning Models",
-        description: "We don't just use APIs; we build them. Our data scientists design, train, and deploy proprietary machine learning models tailored exclusively to your highly specific datasets. Whether it's fraud detection algorithms or personalized recommendation engines, we build algorithms that give you a competitive edge."
+        title: "Customer Service",
+        description: "Enhance customer experiences with responsive, AI-driven solutions that can provide information, assistance, and support in various environments.",
+        image: "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80&w=800",
+        tags: ["Interaction", "Assistance"]
+      },
+      {
+        title: "Manufacturing",
+        description: "Revolutionize production lines with intelligent AI that performs quality control, material handling, and collaborative assembly operations with precision and efficiency.",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800",
+        tags: ["Automation", "Quality Control"]
+      },
+      {
+        title: "Logistics & Warehousing",
+        description: "Optimize warehouse operations with autonomous AI that handles inventory management, order picking, and material transport, maximizing throughput and accuracy.",
+        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800",
+        tags: ["Efficiency", "Automation"]
+      },
+      {
+        title: "Hospitality",
+        description: "Elevate guest experiences in hotels and resorts with AI services that provide concierge assistance, room service delivery, and interactive information services.",
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800",
+        tags: ["Guest Service", "Innovation"]
       }
     ]
   }
