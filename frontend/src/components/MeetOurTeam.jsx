@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Linkedin, ChevronLeft, ChevronRight, Globe } from 'lucide-react';
 import { teamMembers } from '../data/meetTeam';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Keyboard, Navigation } from 'swiper/modules';
@@ -110,7 +110,7 @@ const MeetOurTeam = () => {
                   {/* Hover Gradient Background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                   
-                  <div className="w-full aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800/50 select-none">
+                  <div className="w-full h-64 sm:h-56 relative overflow-hidden bg-gray-50 dark:bg-gray-800/50 select-none">
                     {member.image ? (
                       <img src={member.image} alt={member.name} draggable={false} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     ) : (
@@ -121,19 +121,31 @@ const MeetOurTeam = () => {
                       </div>
                     )}
                     
-                    {/* LinkedIn Overlay */}
-                    {member.linkedin && (
-                      <div className="absolute top-4 right-4 z-20 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 transform md:translate-y-2 md:group-hover:translate-y-0">
+                    {/* Social/Portfolio Links Overlay */}
+                    <div className="absolute top-4 right-4 z-20 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 transform md:translate-y-2 md:group-hover:translate-y-0 flex flex-col gap-2">
+                      {member.linkedin && (
                         <a 
                           href={member.linkedin} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="flex items-center justify-center w-12 h-12 rounded-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-colors duration-300 shadow-xl"
+                          className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-colors duration-300 shadow-xl"
                         >
-                          <Linkedin size={22} />
+                          <Linkedin size={20} className="sm:w-[22px] sm:h-[22px]" />
                         </a>
-                      </div>
-                    )}
+                      )}
+                      
+                      {member.portfolio && (
+                        <a 
+                          href={member.portfolio} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md text-pink-600 dark:text-pink-400 hover:bg-pink-600 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white transition-colors duration-300 shadow-xl"
+                          title="View Portfolio"
+                        >
+                          <Globe size={20} className="sm:w-[22px] sm:h-[22px]" />
+                        </a>
+                      )}
+                    </div>
                   </div>
 
                   <div className="p-5 sm:p-6 md:p-8 flex flex-col flex-grow relative z-10 bg-white dark:bg-[#111824] border-t border-gray-100 dark:border-gray-800/50">
@@ -143,9 +155,15 @@ const MeetOurTeam = () => {
                     <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 line-clamp-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                       {member.name}
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400 font-medium text-xs sm:text-sm md:text-base mb-0 line-clamp-1">
+                    <p className="text-blue-600 dark:text-blue-400 font-medium text-xs sm:text-sm md:text-base mb-2 sm:mb-3 line-clamp-1">
                       {member.role}
                     </p>
+                    {member.description && (
+                      <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm line-clamp-3 mb-4">
+                        {member.description}
+                      </p>
+                    )}
+
                   </div>
                 </motion.div>
               </SwiperSlide>
